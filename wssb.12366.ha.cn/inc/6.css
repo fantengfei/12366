@@ -1,0 +1,112 @@
+/*
+2号论坛配色方案：
+*/
+
+
+/* 浅色 */
+
+
+.color1 
+
+{
+
+	background-color : #f3f6ff;
+
+	FONT-SIZE: 9pt;
+	SCROLLBAR-ARROW-COLOR: #ffffff;
+	SCROLLBAR-BASE-COLOR: #dee3f7;
+
+}
+
+
+
+/* 深色 */
+
+
+.color2 
+
+{
+
+	background-color : #0099CC;
+
+}
+
+
+
+
+/* 更深色 */
+
+
+.color3
+
+{
+
+	background-color : #003366;
+
+}
+
+
+
+/* 
+color4 分割条颜色 没有效果 
+*/
+
+
+
+.color4 
+
+{
+	border-left-color: black;
+	background: red;
+	border-style: solid;
+
+}
+
+
+
+
+
+
+/*
+ 贴子列表中的浅色方案 
+*/
+
+
+.color5
+
+{
+
+	background-color : #dddddd;
+
+}
+
+
+
+
+
+/* 
+下面连续两个是用在字体颜色上，
+刷新 | 搜索 | 提问 | 未解决 | 已解决 | 精华区 | FAQ | 专题
+当前的是color7  
+*/
+
+
+
+
+.color6
+
+{
+
+	color : #689ace;
+
+}
+
+
+
+.color7
+
+{
+
+	color : #000000;
+
+}

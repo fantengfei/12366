@@ -1,0 +1,11 @@
+/* CSS Document */
+a{ text-decoration:none; font-size:12px; color:#272727;}
+.topbake{ background:url(../images/bg.gif)  no-repeat center top; width:100%; height:80px; }
+.caozuo{ margin-left:900px; height:34px; padding-top:14px;}
+.topleft{ background:url(../images/edit.gif) no-repeat;width:116px; height:21px; float:left;}
+.topcenter{ background:url(../images/editkl.gif) no-repeat;width:92px; height:21px; float:left; margin-left:10px;}
+.topright{ background:url(../images/del.gif) no-repeat;width:92px; height:21px; float:left;margin-left:10px;}
+.caozuo a{ margin-left:30px; display:block; margin-top:5px;}
+.clear{ clear:both;}
+.topx{background:url(../images/topx.gif) repeat-x ; height:32px; clear:both;}
+

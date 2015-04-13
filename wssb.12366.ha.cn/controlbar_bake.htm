@@ -1,0 +1,129 @@
+﻿
+<HTML>
+	<HEAD>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Controlbar</title>
+		<script language="javascript">
+		<!--
+		var strColumns_Current = "215,*";
+
+		function movenext()
+		{
+			top.deeptree.movenext();
+		}
+
+		function moveprevious()
+		{
+			top.deeptree.moveprevious();
+		}
+
+		function hidetoc()
+		{
+			top.fstMain.cols = "2,*";
+			top.fraRightFrame.fraContentBar.document.all("show1").style.display = top.fraRightFrame.fraContentBar.document.all("show2").style.display = "block";
+		}
+
+		function showtoc()
+		{
+			top.mainframeset.cols = strColumns_Current;
+			top.contentbar.document.all("show1").style.display = top.contentbar.document.all("show2").style.display = "none";
+		}
+
+		function synctoc()
+		{
+			window.parent.location.reload();
+		}
+
+		function displaybutton()
+		{
+			document.all.showtoc.style.display = "block";
+		}
+
+		function mouseover(item)
+		{
+			switch (item)
+			{
+				case "moveprevious" :
+					window.status = "移动到菜单上一项 [SHIFT + TAB]";
+					document.all.imgMovePrevious.src = "Images/moveprevious2.gif";
+					break;
+				case "movenext" :
+					window.status = "移动到菜单下一项 [TAB]";
+					document.all.imgMoveNext.src = "Images/movenext2.gif";
+					break;
+				case "synctoc" :
+					window.status = "同步菜单中的当前页";
+					document.all.imgSyncToc.src = "Images/synctoc2.gif"
+					break;
+				case "hidetoc" :
+					window.status = "隐藏菜单";
+					document.all.imgHideToc.src = "Images/hidetoc2.gif"
+					break;
+			}
+		}
+
+		function mouseout(item)
+		{
+			switch (item)
+			{
+				case "moveprevious" :
+					window.status = "";
+					document.all.imgMovePrevious.src = "Images/moveprevious1.gif";
+					break;
+				case "movenext" :
+					window.status = "";
+					document.all.imgMoveNext.src = "Images/movenext1.gif";
+					break;
+				case "synctoc" :
+					window.status = "";
+					document.all.imgSyncToc.src = "Images/synctoc1.gif"
+					break;
+				case "hidetoc" :
+					window.status = "";
+					document.all.imgHideToc.src = "Images/hidetoc1.gif"
+					break;
+			}
+		}
+
+		function selectstart()
+		{
+			window.event.cancelBubble = true;
+			window.event.returnValue = false;
+			return false;
+		}
+		//-->
+		</script>
+	</HEAD>
+	<body onselectstart="selectstart();" topmargin="0" leftmargin="0" marginheight="10" marginwidth="0">
+		<table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#e5edef">
+			<tr>
+				<td align="left">
+					<table border="0" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td height="20" width="4"></td>
+							<td height="20"><img id="imgMoveNext" style="CURSOR:hand" onMouseOver="mouseover('movenext');" onMouseOut="mouseout('movenext')"
+									onclick="movenext();" title="移动到菜单下一项 [TAB]" src="Images/movenext1.gif" border="0"></td>
+							<td height="20" width="2"></td>
+							<td height="20"><img id="imgMovePrevious" style="CURSOR:hand" onMouseOver="mouseover('moveprevious');"
+									onmouseout="mouseout('moveprevious')" onClick="moveprevious();" title="移动到菜单上一项 [SHIFT + TAB]"
+									src="Images/moveprevious1.gif" border="0"></td>
+							<td height="20" width="8"></td>
+						</tr>
+					</table>
+				</td>
+				<td align="right">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td height="20"><img id="imgSyncToc" style="CURSOR:hand" onClick="synctoc();" onMouseOver="mouseover('synctoc');"
+									onmouseout="mouseout('synctoc');" src="Images/synctoc1.gif" title="同步菜单中的当前页"></td>
+							<td height="20" width="10"><img src="Images/1pix.gif" width="10" height="20"></td>
+							<td height="20"><img id="imgHideToc" style="CURSOR:hand" onClick="hidetoc();" onMouseOver="mouseover('hidetoc');"
+									onmouseout="mouseout('hidetoc');" src="Images/hidetoc1.gif" title="隐藏菜单"></td>
+							<td height="20" width="4"><img src="Images/1pix.gif" width="4" height="20"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</HTML>

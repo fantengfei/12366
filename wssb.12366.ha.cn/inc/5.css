@@ -1,0 +1,7 @@
+.beijing{ background:url(../images/zy.gif) repeat-x; height:28px; line-height:28px; width:100%; margin-top:10px; border:1px solid #b7ced4; border-bottom:2px solid #b7ced4; }
+.mzy{ height:24px; line-height:24px;  margin-top:2px; border-bottom:1px solid #b7ced4; }
+.mzy  a{ text-decoration:none; color:#112b4c; float:left; background:url(../images/bg5.gif) no-repeat; height:25px; display:block; width:109px; text-align:center; }
+img{ list-style:none; border:none;}
+.mzy a:hover{ background:url(../images/hover1.gif) no-repeat; width:109px; height:25px;}
+#a1 a:hover{ background:url(../images/hover.gif) no-repeat;  height:25px; display:block; width:109px; border:1px #b8cfd5 1px;}
+ 
