@@ -33,18 +33,21 @@
                 region: "north",
                 border: false,
                 height: 100,
+                bodyStyle: 'background: #DDEAEB',
                 html: '<iframe frameborder="0" src="/12366/www.12366.ha.cn/Application/Home/Common/html/top.html" height="100%" width="100%"></iframe>'
             },{
                 id:"south",
                 region: "south",
                 border: false,
-                height: 30,
-                html: '<div style="padding-top: 6px; padding-right: 30px; text-align: right;">技术支持：航天金穗 河南百旺</div>'
+                height: 27,
+                bodyStyle: 'background: #DDEAEB',
+                html: '<div style="padding-top: 5px; padding-right: 30px; text-align: right;">技术支持：航天金穗 河南百旺</div>'
             },{
                 id: "east",
                 region: "east",
                 border: false,
-                width: 5
+                width: 5,
+                bodyStyle: 'background: #DDEAEB'
             },{
                 id: "west",
                 title: '功能菜单',
@@ -52,12 +55,14 @@
                 split: true,
                 collapsible: true,
                 width: 300,
+                bodyStyle: 'background: #DDEAEB',
                 html:'<div id="div-west"></div>'
             },{
                 id: 'center',
                 region: "center",
                 split: false,
                 border: false,
+                bodyStyle: 'background: #DDEAEB',
                 items: tabpanel
             }]
         });
@@ -74,6 +79,7 @@
             id: 'treeview',
             rootVisible: true,
             border: false,
+            height: Ext.get('west').getHeight(),
             renderTo: 'div-west',
             store: Ext.create('Ext.data.TreeStore', {
                 root: {
@@ -113,7 +119,7 @@
                         url: url,
                         title: text,
                         closable: true,
-                        html: "<iframe frameborder='0' src=" + url + " width='100%' height='100%'></iframe>"
+                        html: "<iframe frameborder='0' scrolling='yes' width='100%' height='100%' style='background-color: #E6E4D1;' src="+url+"></iframe>"
                     }).show();
                 }
             }
@@ -123,6 +129,6 @@
 
 </script>
 </head>
-<body>
+<body style="background-color: #DDEAEB">
 </body>
 </html>
