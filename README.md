@@ -2,10 +2,11 @@
 系统基于 ThinkPHP 和 ExtJS 开发。
 
 # Git 基础
-*可以下载 GitHub 客户端，但是重点提一下命令行开发（当然也可以用svn）*
+*可以下载 GitHub 客户端，这里重点提一下命令行开发*
 
 ### 获取仓库代码
-1. git clone https://github.com/fantengfei/12366.git
+1. 安装 Git，详情自己找到案
+2. git clone https://github.com/fantengfei/12366.git
 
 ### 提交版本
 1. git status
