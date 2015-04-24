@@ -20,11 +20,11 @@ class TableNode1Controller extends Controller {
 
     // 增值纳税申报表（一般个人使用）
     public function table1() {
-        echo "增值纳税申报表（一般个人使用）";
+        $this->display('table1');
     }
 
     public  function  table2() {
-        echo "增值纳税申报表附列表一";
+        $this->display('table2');
     }
 
 
