@@ -1,2 +1,3 @@
-#忽略掉 Runtime 文件夹下的所有
-Runtime/*
+*Runtime/*
+*workspace.xml
+*.DS_Store
