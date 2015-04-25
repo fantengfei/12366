@@ -44,7 +44,7 @@
     <td class='topTd toptr tdtime' >本年统计</td>
 </tr>
 <tr>
-    <td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
+    <td class='topTd toptr' rowspan = '10' id="" style='width:36px;' >销售额</td>
     <td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
     <td class='topTd' >1</td>
     <td class ='tadata icon'>
@@ -245,7 +245,7 @@
     </td>
 </tr>
 <tr>
-    <td class='topTd' rowspan = '2'></td>
+    <td class='topTd' rowspan = '14'>税款计算</td>
     <td class='topTd' >销项税额</td>
     <td class='topTd' >11</td>
     <td class ='tadata icon'>
@@ -260,7 +260,7 @@
         <div class='divimage'></div>
         <div class='divdata'>0.00</div>
     </td>
-    <td class ='tadata'>
+    <td class ='tadata green'>
         <div class='divimage'></div>
         <div class='divdata'>0.00</div>
     </td>
@@ -274,16 +274,559 @@
     </td>
     <td class ='tadata green'>
         <div class='divimage'></div>
+        <div class='divdata'>3,811,400,54</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >上期留抵税款</td>
+    <td class='topTd' >13</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >进项税额转出</td>
+    <td class='topTd' >14</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>1,694,115,40</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >免，抵，退应退税额</td>
+    <td class='topTd' >15</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >按使用税率计算的纳税检查应补缴税额</td>
+    <td class='topTd' >16</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >应抵扣税额合计</td>
+    <td class='topTd' >17=12+13-14-15+16</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >实际抵扣税额</td>
+    <td class='topTd' >18（如17<11则为17，否则为11）</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
         <div class='divdata'>0.00</div>
     </td>
     <td class ='tadata tdgray'>
         <div class='divimage'></div>
         <div class='divdata'>0.00</div>
     </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >应纳税额</td>
+    <td class='topTd' >19=11-18</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>178,578,67</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >期末留抵税额</td>
+    <td class='topTd' >20=17-18</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >简易计算办法计算的应纳税额</td>
+    <td class='topTd' >21</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >按简易计算办法计算的纳税检查应补缴税额</td>
+    <td class='topTd' >22</td>
     <td class ='tadata'>
         <div class='divimage'></div>
         <div class='divdata'>0.00</div>
     </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >应纳税额减征额</td>
+    <td class='topTd' >23</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >应纳税额合计</td>
+    <td class='topTd' >24=19+21-23</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>178,578,67</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' rowspan = '14'>税款交纳</td>
+    <td class='topTd' >期末未缴税额（多缴为负数）</td>
+    <td class='topTd' >25</td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>2,295,863,81</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >实收出口开具专用缴款书退税额</td>
+    <td class='topTd' >26</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >本期已缴税额</td>
+    <td class='topTd' >27=28+29+30+31</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>178,578,67</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>531,385,38</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >①分期预缴税额</td>
+    <td class='topTd' >28</td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >②出口开具专用缴款书预缴税款</td>
+    <td class='topTd' >29</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >③本期交纳上期应缴税额</td>
+    <td class='topTd' >30</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>178,578,67</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>531,385,38</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >④本期缴纳欠缴税额</td>
+    <td class='topTd' >31</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >期末未交税额（多缴为负数）</td>
+    <td class='topTd' >32=24+25+26-27</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >其中：欠缴税额（≥0）</td>
+    <td class='topTd' >33=25+26-27</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >本期应补（退）税额</td>
+    <td class='topTd' >34=24-28-29</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >即征即退实际退税额</td>
+    <td class='topTd' >35</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >期初未交查补税额</td>
+    <td class='topTd' >36</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>-14,704,27</div>
+    </td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>-14,704,27</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >本期入库查补税额</td>
+    <td class='topTd' >37</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >期末未缴查补税额</td>
+    <td class='topTd' >38=16+22+36-37</td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--</div>
+    </td>
+</tr>
+
+<tr class="trfoot" >
+    <td rowspan = '6'>授权声明</td>
+    <td rowspan = '5' colspan = '2' class='border-bottom-none'>如果你已委托代理人申报，请填写以下资料：为代理一切事宜，现授权：（地址）为本纳税人的代理申报人，任何与本申报表有关的往来文件，都可以寄予此人。</td>
+    <td rowspan = '6' align="center">声请人声明</td>
+    <td rowspan = '5' class='border-bottom-none' colspan = '3'>&nbsp;&nbsp;本纳税生报表是根据国家税收法律法规即相关规定填报的，我确定它真实的，可靠地，完整的。</td>
+</tr>
+<tr class="trfoot"></tr>
+<tr class="trfoot"></tr>
+<tr class="trfoot"></tr>
+<tr class="trfoot"></tr>
+
+<tr>
+    <td colspan = '2' class="input-align-right">授权人签字：</td>
+    <td colspan = '3' class="input-align-right">声明人签字：</td>
+</tr>
+
+<tr class='trtdfoot'>
+    <td colspan='3' >主管税务机关：</td>
+    <td colspan='1' >接收人：</td>
+    <td colspan='3' >接收日期：</td>
 </tr>
 </table>
 </block>

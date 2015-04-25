@@ -11,6 +11,8 @@ table{
 	border-collapse: collapse;
 	border:0px solid #111111;
 	background-color: #ffffff;
+    /*cursor:crosshair;*/
+
 }
 table td{
 	border:1px solid #111111;
@@ -68,4 +70,29 @@ table td{
 .divdata{
 	float:right;
 	margin-right:-3px;
-}	
+}
+.trfoot{
+    height: 22px;
+    font-size: 13px;
+}
+.trtdfoot{
+    height: 22px;
+    font-size: 13px;
+    border:0px solid;
+}
+.trtdfoot td{
+    height: 22px;
+    font-size: 13px;
+    border:0px solid;
+}
+.input-align-right{
+    border-top:0px solid;
+    text-align:right;
+    padding-right:30px;
+    font-size: 13px;
+}
+.border-bottom-none{
+    padding-top:10px;
+    vertical-align: text-top;
+    border-bottom:0px solid;
+}
