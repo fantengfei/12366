@@ -1,19 +1,6 @@
 <script type="text/javascript">
     Ext.onReady(function() {
 
-        var tabpanel = new Ext.TabPanel({
-            id: 'tabpanel',
-            deferredRender: true,
-            activeTab: 0,
-            items: [
-                {
-                    title: '我的主页',
-                    html: '<iframe frameborder="0" src="__APP__/Home/Default/home"  width="100%" height="100%"></iframe>',
-                    icon: 'home'
-                }
-            ]
-        });
-
         /**
          * tree
          * 在这里添加树节点
@@ -44,6 +31,42 @@
                     }]
                 }
             })
+        });
+
+        var tabpanel = new Ext.TabPanel({
+            id: 'tabpanel',
+            deferredRender: true,
+            activeTab: 0,
+            items: [
+                {
+                    title: '我的主页',
+                    html: '<iframe frameborder="0" src="__APP__/Home/Default/home"  width="100%" height="100%"></iframe>',
+                    icon: 'home'
+                }
+            ]
+        });
+
+        treepanel.on({
+            //单击事件
+            'itemclick': function(view, rcd, item, idx, event, eOpts) {
+                var url = rcd.get('url');
+                var text = rcd.get('text');
+                if (url) {
+                    var items = tabpanel.items.items;
+                    for (var i=0; i< items.length; i++) {
+                        if (items[i].title == text && items[i].url == url) {
+                            tabpanel.setActiveTab(i);
+                            return;
+                        }
+                    }
+                    tabpanel.add({
+                        url: url,
+                        title: text,
+                        closable: true,
+                        html: "<iframe frameborder='0' scrolling='no' width='100%' height='100%' style='background-color: #E6E4D1; margin:0;padding:0' src="+url+"></iframe>"
+                    }).show();
+                }
+            }
         });
 
         var viewPort = new Ext.Viewport({
@@ -87,29 +110,6 @@
                 items: [tabpanel],
                 layout: 'fit'
             }]
-        });
-
-        treepanel.on({
-            //单击事件
-            'itemclick': function(view, rcd, item, idx, event, eOpts) {
-                var url = rcd.get('url');
-                var text = rcd.get('text');
-                if (url) {
-                    var items = tabpanel.items.items;
-                    for (var i=0; i< items.length; i++) {
-                        if (items[i].title == text && items[i].url == url) {
-                            tabpanel.setActiveTab(i);
-                            return;
-                        }
-                    }
-                    tabpanel.add({
-                        url: url,
-                        title: text,
-                        closable: true,
-                        html: "<iframe frameborder='0' scrolling='yes' width='100%' height='100%' style='background-color: #E6E4D1;' src="+url+"></iframe>"
-                    }).show();
-                }
-            }
         });
      });
 

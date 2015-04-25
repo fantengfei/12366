@@ -1,0 +1,43 @@
+<include file="Public/Home/headFile.html" />
+<script type="text/javascript">
+    Ext.onReady(function(){
+
+        Ext.get('bodydiv').setHeight(Ext.get('body-base').getHeight() + 9);
+
+        Ext.create('Ext.toolbar.Toolbar', {
+            renderTo: 'tool-bar',
+            border: false,
+            items: [{
+                xtype: 'button', // default for Toolbars
+                text: '保存',
+                icon: 'save',
+                listeners: {
+                    click: {
+                        fn: function() {
+                            alert(Ext.get('bodytable').getHtml());
+                        }
+                    }
+                }
+            },'-', {
+                xtype: 'button',
+                text : '删除',
+                icon: 'delete'
+            },'-', {
+                xtype:'button',
+                text: '打印预览',
+                icon: 'check'
+            },'-', {
+                xtype: 'button',
+                text: '提取数据',
+                icon:'get_data'
+            },'-',{
+                xtype: 'checkbox',
+                boxLabel: '修改本年累计'
+            },'->', {
+                xtype: 'button',
+                text: 'help',
+                icon: 'help'
+            }]
+        });
+    });
+</script>
