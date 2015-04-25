@@ -1,0 +1,2 @@
+#忽略掉 Runtime 文件夹下的所有
+Runtime/*

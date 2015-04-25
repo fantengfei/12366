@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>河南省国家税务局互联网申报系统</title>
     <script src="/12366/www.12366.ha.cn/Public/ext/ext-all.js"></script>
-<script src="/12366/www.12366.ha.cn/Public/ext/bootstrap.js"></script>
+<!--<script src="/12366/www.12366.ha.cn/Public/ext/bootstrap.js"></script>-->
 <script src="/12366/www.12366.ha.cn/Public/ext/packages/ext-locale/build/ext-locale-zh_CN.js"></script>
 <link href="/12366/www.12366.ha.cn/Public/ext/packages/ext-theme-classic/build/resources/ext-theme-classic-all.css" rel="stylesheet" />
 <!--<link href="/12366/www.12366.ha.cn/Public/ext/packages/ext-theme-neptune/build/resources/ext-theme-neptune-all.css" rel="stylesheet" />-->
@@ -19,52 +19,11 @@
             items: [
                 {
                     title: '我的主页',
-                    html: '<iframe frameborder="0" src="/12366/www.12366.ha.cn/Application/Home/Common/html/home.html"  width="100%" height="100%"></iframe>',
+                    html: '<iframe frameborder="0" src="/12366/www.12366.ha.cn/index.php/Home/Default/home"  width="100%" height="100%"></iframe>',
                     icon: 'home'
                 }
             ]
         });
-
-        var viewPort = new Ext.Viewport({
-            layout: "border",
-            renderTo: Ext.getBody(),
-            items: [{
-                id:"north",
-                region: "north",
-                border: false,
-                height: 100,
-                html: '<iframe frameborder="0" src="/12366/www.12366.ha.cn/Application/Home/Common/html/top.html" height="100%" width="100%"></iframe>'
-            },{
-                id:"south",
-                region: "south",
-                border: false,
-                height: 30,
-                html: '<div style="padding-top: 6px; padding-right: 30px; text-align: right;">技术支持：航天金穗 河南百旺</div>'
-            },{
-                id: "east",
-                region: "east",
-                border: false,
-                width: 5
-            },{
-                id: "west",
-                title: '功能菜单',
-                region: "west",
-                split: true,
-                collapsible: true,
-                width: 300,
-                html:'<div id="div-west"></div>'
-            },{
-                id: 'center',
-                region: "center",
-                split: false,
-                border: false,
-                items: tabpanel
-            }]
-        });
-
-        // 设置tabpanel的高度
-        tabpanel.setHeight(Ext.get('center').getHeight());
-
 
         /**
          * tree
@@ -74,10 +33,12 @@
             id: 'treeview',
             rootVisible: true,
             border: false,
-            renderTo: 'div-west',
+            autoScroll: true,
+            bodyStyle: 'margin-top: -1px; overflow-x:scroll; overflow-y:scroll;',
             store: Ext.create('Ext.data.TreeStore', {
                 root: {
                     text: '我的权限',
+                    border:false,
                     expanded: true,
                     children: [{
                         text: "增值税（一般纳税人使用）",
@@ -85,15 +46,58 @@
                         children: [{
                             text: "增值纳税申报表（一般纳税人使用）",
                             leaf: true,
-                            url: "/12366/www.12366.ha.cn/index.php/Home/Index/login"
+                            url: "/12366/www.12366.ha.cn/index.php/Home/TableNode1/table1"
                         },{
                             text: "增值纳税申报表附列资料（一）",
                             leaf: true,
-                            url: "/12366/www.12366.ha.cn/index.php/Home/Index/login"
+                            url: "/12366/www.12366.ha.cn/index.php/Home/TableNode1/table2"
                         }]
                     }]
                 }
             })
+        });
+
+        var viewPort = new Ext.Viewport({
+            layout: "border",
+            renderTo: Ext.getBody(),
+            items: [{
+                id:"north",
+                region: "north",
+                border: false,
+                height: 86,
+                bodyStyle: 'background: #E7F1F2;',
+                html: '<iframe src="/12366/www.12366.ha.cn/index.php/Home/Default/top" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>'
+            },{
+                id:"south",
+                region: "south",
+                border: false,
+                height: 27,
+                bodyStyle: 'background: #E7F1F2',
+                html: '<div style="padding-top: 5px; padding-right: 30px; text-align: right;">技术支持：航天金穗 河南百旺</div>'
+            },{
+                id: "east",
+                region: "east",
+                border: false,
+                width: 5,
+                bodyStyle: 'background: #E7F1F2'
+            },{
+                id: "west",
+                title: '<b style="color: #000;">功能菜单</b>',
+                region: "west",
+                split: true,
+                collapsible: true,
+                width: 300,
+                items: [treepanel],
+                layout: 'fit'
+            },{
+                id: 'center',
+                region: "center",
+                split: false,
+                border: false,
+                bodyStyle: 'background: #E7F1F2',
+                items: [tabpanel],
+                layout: 'fit'
+            }]
         });
 
         treepanel.on({
@@ -113,16 +117,17 @@
                         url: url,
                         title: text,
                         closable: true,
-                        html: "<iframe frameborder='0' src=" + url + " width='100%' height='100%'></iframe>"
+                        html: "<iframe frameborder='0' scrolling='yes' width='100%' height='100%' style='background-color: #E6E4D1;' src="+url+"></iframe>"
                     }).show();
                 }
             }
         });
-
      });
+
+
 
 </script>
 </head>
-<body>
+<body style="background-color: #DDEAEB">
 </body>
 </html>
