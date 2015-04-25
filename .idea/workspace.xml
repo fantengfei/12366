@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac99c2cb-fb2f-40c7-b872-41143d88ab05" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www.12366.ha.cn/Application/Runtime/Cache/Home/d2741c2bbf13319497bdd823a5eb1e01.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/www.12366.ha.cn/Application/Runtime/Logs/Home/15_04_23.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/www.12366.ha.cn/Application/Runtime/Logs/Home/15_04_24.log" afterPath="$PROJECT_DIR$/www.12366.ha.cn/Application/Runtime/Logs/Home/15_04_24.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="ac99c2cb-fb2f-40c7-b872-41143d88ab05" name="Default" comment="" />
     <ignored path="12366.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
