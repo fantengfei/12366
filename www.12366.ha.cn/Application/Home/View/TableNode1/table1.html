@@ -41,6 +41,7 @@
 		.tadata{
 			text-align: right;
 			font-size: 13px;
+			width:130px;
 			font-family: 宋体;
 		}
 		.green{
@@ -101,7 +102,7 @@
 				</tr>
 				<tr>
 					<td class='topTd toptr' colspan = '2' rowspan = '2'>项目</td>
-					<td class='topTd toptr' rowspan = '2' id="columns">栏次</td>
+					<td class='topTd toptr' rowspan = '2' id="columns" style='width:80px;'>栏次</td>
 					<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
 					<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
 				</tr>
@@ -112,10 +113,10 @@
 					<td class='topTd toptr tdtime' >本年统计</td>
 				</tr>
 				<tr>
-					<td class='topTd toptr' rowspan = '10'>销售额</td>
-					<td class='topTd' >（一）按使用税率计算销售额</td>
+					<td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
+					<td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
 					<td class='topTd' >1</td>
-					<td class ='tadata'>0.00</td>
+					<td class ='tadata'><div>1</div>0.00</td>
 					<td class ='tadata green'>13,505,080,88</td>
 					<td class ='tadata tdgray'>0.00</td>
 					<td class ='tadata'>0.00</td>
@@ -221,7 +222,11 @@
 		function saveinput(obj){
 			var string = obj.val();
 			parentobj = obj.parent();
-			parentobj.html(string);
+			if(obj.parent().hasClass('tadata') && $.trim(string) == ''){
+				parentobj.html('--');
+			}else{
+				parentobj.html(string);
+			}
 		}
 
 		function addinput(obj){
