@@ -1,245 +1,290 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>html</title>
-		<meta http-equiv="content-type" content="text/html charset=utf8">
-		<script src="__PUBLIC__/jquery-1.4.3.min.js"></script>
-	</head>
-	<style>
-		body{
-			margin:0px;
-			padding:0px;
-		}
-		#bodydiv{
-			width:950px;
-			height:100%;
-			float:left;
-		}
-		table{
-			border-collapse: collapse;
-			border:0px solid #111111;
-			background-color: #ffffff;
-		}
-		table td{
-			border:1px solid #111111;
-			height:22px;
-
-		}
-		.topTd{
-			background-color: #C8D8FA;
-			font-size: 12px;
-		}
-		.toptr{
-			text-align: center;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		.tdtime{
-			padding: 0px;
-			width:128px;
-		}
-		.tadata{
-			text-align: right;
-			font-size: 13px;
-			width:130px;
-			font-family: 宋体;
-		}
-		.green{
-			background-color: #CFFDCE;
-		}
-		.tdgray{
-			background-color: #C0C0C0;
-		}
-		#columns{
-			width:80px;
-		}
-		.titletr{
-			font-size: 12px;
-		}
-		.titletr td{
-			border:0px solid;
-		}
-		.title-notic{
-			text-align: center;
-		}
-		#titletd{
-			font-size: 21px;
-			font-weight: 600;
-		}
-	</style>
-	<body>
-		<div id= 'bodydiv'>
-			<table id="bodytable">
-				<tr class='titletr title-notic'>
-					<td colspan = '7' id='titletd'>增值税纳税申请表（一般纳税人使用）</td>
-				</tr>
-				<tr class='titletr '>
-					<td colspan = '7'>&nbsp;</td>
-				</tr>
-				<tr class='titletr title-notic'>
-					<td colspan = '7'>根据国家税收法律法规及增值税相关规定制定本表。纳税人不论有无销售额，均应按税务机关规定的纳税期限填写本表，并向当地税务机关申报。</td>
-				</tr>
-				<tr class='titletr'>
-					<td colspan = '3'>税款所属期：自2015年02月01日至2015年02月28日</td>
-					<td colspan = '2'>填表日期：2015年03月06日</td>
-					<td colspan = '2'>电话号码：13903730918</td>
-				</tr>
-				<tr class='titletr'>
-					<td colspan = '3'>纳税人名称：河南起重机械有限公司</td>
-					<td colspan = '2'>注册地址：新乡新长北线北侧</td>
-					<td colspan = '2'>生产经营地址：新乡新长北线北侧</td>
-				</tr>
-				<tr class='titletr'>
-					<td colspan = '3'>纳税人识别号：410711775106396</td>
-					<td colspan = '2'>所属行业：轻小型起重设备制造</td>
-					<td colspan = '2'>法定代表人：郭章先</td>
-				</tr>
-				<tr class='titletr'>
-					<td colspan = '2'>开户银行：中国工商银行</td>
-					<td colspan = '2'>银行账号：1704022419021023193</td>
-					<td colspan = '2'>登记注册类型：其他有限责任公司</td>
-					<td colspan = '1'>金额单位：元至角分</td>
-				</tr>
-				<tr>
-					<td class='topTd toptr' colspan = '2' rowspan = '2'>项目</td>
-					<td class='topTd toptr' rowspan = '2' id="columns" style='width:80px;'>栏次</td>
-					<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
-					<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
-				</tr>
-				<tr >
-					<td class='topTd toptr tdtime' >本月数</td>
-					<td class='topTd toptr tdtime' >本年统计</td>
-					<td class='topTd toptr tdtime' >本月数</td>
-					<td class='topTd toptr tdtime' >本年统计</td>
-				</tr>
-				<tr>
-					<td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
-					<td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
-					<td class='topTd' >1</td>
-					<td class ='tadata'><div>1</div>0.00</td>
-					<td class ='tadata green'>13,505,080,88</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >其中：应税货物销售额</td>
-					<td class='topTd' >2</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >应税劳务销售额</td>
-					<td class='topTd' >3</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >纳税检查调整的销售额</td>
-					<td class='topTd' >4</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >（二）按简易办法计税的销售额</td>
-					<td class='topTd' >5</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >其中：纳税检查调整的销售额</td>
-					<td class='topTd' >6</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >（三）免，抵，退办法出口销售额&nbsp; &nbsp; &nbsp;</td>
-					<td class='topTd' >7</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>--</td>
-					<td class ='tadata'>--</td>
-				</tr>
-				<tr>
-					<td class='topTd' >（四）免税销售额</td>
-					<td class='topTd' >8</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>--</td>
-					<td class ='tadata'>--</td>
-				</tr>
-				<tr>
-					<td class='topTd' >其中：免税货物销售额</td>
-					<td class='topTd' >9</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>--</td>
-					<td class ='tadata'>--</td>
-				</tr>
-				<tr>
-					<td class='topTd' >免税劳务销售额</td>
-					<td class='topTd' >10</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>--</td>
-					<td class ='tadata'>--</td>
-				</tr>
-				<tr>
-					<td class='topTd' rowspan = '2'></td>
-					<td class='topTd' >销项税额</td>
-					<td class='topTd' >11</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>2,295,863,81</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-				<tr>
-					<td class='topTd' >进项税额</td>
-					<td class='topTd' >12</td>
-					<td class ='tadata'>0.00</td>
-					<td class ='tadata green'>0.00</td>
-					<td class ='tadata tdgray'>0.00</td>
-					<td class ='tadata'>0.00</td>
-				</tr>
-			</table>
-		</div>
-	</body>
-	<script type="text/javascript">
-
-		$("#bodytable td").dblclick(function(){
-			addinput($(this));
-		});
-
-		function saveinput(obj){
-			var string = obj.val();
-			parentobj = obj.parent();
-			if(obj.parent().hasClass('tadata') && $.trim(string) == ''){
-				parentobj.html('--');
-			}else{
-				parentobj.html(string);
-			}
-		}
-
-		function addinput(obj){
-			var inputlength = obj.children('input').length
-			if(inputlength > 0){
-				return false;
-			}
-			var string = obj.html();
-			var length = parseInt(obj.width())-5;
-			var color = obj.css('background-color');
-			obj.html('<input type="text" style="border:0px solid #666666;font-size:13px;height:15px;background-color:'+color+';width:'+length+'px;"  id="editinput" value="'+string+'" onblur="saveinput($(this))" />');
-			$("#editinput").focus();
-		}
-
-	</script>
-</html>
+<extend name="TableNode1/base"/>
+<block name="blocktable">
+<table id="bodytable">
+<tr class='titletr title-notic'>
+    <td colspan = '7' id='titletd'>增值税纳税申请表（一般纳税人使用）</td>
+</tr>
+<tr class='titletr '>
+    <td colspan = '7'>&nbsp;</td>
+</tr>
+<tr class='titletr title-notic'>
+    <td colspan = '7'>根据国家税收法律法规及增值税相关规定制定本表。纳税人不论有无销售额，均应按税务机关规定的纳税期限填写本表，并向当地税务机关申报。</td>
+</tr>
+<tr class='titletr'>
+    <td colspan = '3'>税款所属期：自2015年02月01日至2015年02月28日</td>
+    <td colspan = '2'>填表日期：2015年03月06日</td>
+    <td colspan = '2'>电话号码：13903730918</td>
+</tr>
+<tr class='titletr'>
+    <td colspan = '3'>纳税人名称：河南起重机械有限公司</td>
+    <td colspan = '2'>注册地址：新乡新长北线北侧</td>
+    <td colspan = '2'>生产经营地址：新乡新长北线北侧</td>
+</tr>
+<tr class='titletr'>
+    <td colspan = '3'>纳税人识别号：410711775106396</td>
+    <td colspan = '2'>所属行业：轻小型起重设备制造</td>
+    <td colspan = '2'>法定代表人：郭章先</td>
+</tr>
+<tr class='titletr'>
+    <td colspan = '2'>开户银行：中国工商银行</td>
+    <td colspan = '2'>银行账号：1704022419021023193</td>
+    <td colspan = '2'>登记注册类型：其他有限责任公司</td>
+    <td colspan = '1'>金额单位：元至角分</td>
+</tr>
+<tr>
+    <td class='topTd toptr' colspan = '2' rowspan = '2'>项目</td>
+    <td class='topTd toptr' rowspan = '2' id="columns" style='width:80px;'>栏次</td>
+    <td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
+    <td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
+</tr>
+<tr >
+    <td class='topTd toptr tdtime' >本月数</td>
+    <td class='topTd toptr tdtime' >本年统计</td>
+    <td class='topTd toptr tdtime' >本月数</td>
+    <td class='topTd toptr tdtime' >本年统计</td>
+</tr>
+<tr>
+    <td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
+    <td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
+    <td class='topTd' >1</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>13,505,080,88</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >其中：应税货物销售额</td>
+    <td class='topTd' >2</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >应税劳务销售额</td>
+    <td class='topTd' >3</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >纳税检查调整的销售额</td>
+    <td class='topTd' >4</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >（二）按简易办法计税的销售额</td>
+    <td class='topTd' >5</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >其中：纳税检查调整的销售额</td>
+    <td class='topTd' >6</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >（三）免，抵，退办法出口销售额&nbsp; &nbsp; &nbsp;</td>
+    <td class='topTd' >7</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >（四）免税销售额</td>
+    <td class='topTd' >8</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >其中：免税货物销售额</td>
+    <td class='topTd' >9</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >免税劳务销售额</td>
+    <td class='topTd' >10</td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' rowspan = '2'></td>
+    <td class='topTd' >销项税额</td>
+    <td class='topTd' >11</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>2,295,863,81</div>
+    </td>
+    <td class ='tadata tdgray icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='topTd' >进项税额</td>
+    <td class='topTd' >12</td>
+    <td class ='tadata icon'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata green'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata tdgray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tadata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+</table>
+</block>
+</extend>
