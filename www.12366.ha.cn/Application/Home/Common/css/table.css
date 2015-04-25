@@ -3,11 +3,6 @@ body{
 	padding:0px;
 }
 #bodydiv{
-	width:99.8%;
-    border: solid 1px #000000;
-    overflow:auto;
-    margin: 0px;
-    padding: 0px;
 }
 table{
 	border-collapse: collapse;

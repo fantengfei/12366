@@ -2,7 +2,13 @@
 <script type="text/javascript">
     Ext.onReady(function(){
 
-        Ext.get('bodydiv').setHeight(Ext.get('body-base').getHeight() + 9);
+        // 设置 ‘bodydiv’ 元素的 style
+        Ext.get('bodydiv').setHeight(document.documentElement.clientHeight - 28);
+
+        Ext.fly('bodydiv').setStyle({
+            border: 'solid 1px #000000',
+            overflow:'auto'
+        });
 
         Ext.create('Ext.toolbar.Toolbar', {
             renderTo: 'tool-bar',
