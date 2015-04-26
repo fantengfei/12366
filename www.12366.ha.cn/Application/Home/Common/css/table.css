@@ -96,3 +96,10 @@ table td{
 .none-center{
     margin-right:50px;
 }
+/*字体样式*/
+.text-color{
+	color:red;
+}
+.text-font{
+	font-weight: 600;
+}
