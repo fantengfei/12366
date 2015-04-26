@@ -5,9 +5,9 @@ $("#bodytable td").dblclick(function(){
 function saveinput(obj){
 	var string = obj.val();
 	parentobj = obj.parent();
-	if(obj.parent().hasClass('tadata')){
-		if($.trim(string) == ''){
-			parentobj.html("<div class='divimage'></div><div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>");
+	if(obj.parent().hasClass('tddata')){
+		if($.trim(string) == '' || $.trim(string) == '--'){
+			parentobj.html("<div class='divimage'></div><div class='divdata none-center'>--</div>");
 		}else{
 			parentobj.html("<div class='divimage'></div><div class='divdata'>"+string+"</div>");
 		}	
