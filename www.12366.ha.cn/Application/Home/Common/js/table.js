@@ -26,7 +26,7 @@ function addinput(obj){
 	}else{
 		var string = obj.html();
 	}
-	var length = parseInt(obj.width())-5;
+	var length = parseInt(obj.width())-10;
 	var color = obj.css('background-color');
 	obj.html('<input type="text" style="border:0px solid #666666;font-size:13px;font-family: 宋体;height:15px;background-color:'+color+';width:'+length+'px;"  id="editinput" value="'+string+'" onblur="saveinput($(this))" />');
 	$("#editinput").focus();

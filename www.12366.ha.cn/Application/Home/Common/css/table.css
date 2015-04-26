@@ -3,18 +3,16 @@ body{
 	padding:0px;
 }
 #bodydiv{
+
 }
 table{
 	border-collapse: collapse;
 	border:0px solid #111111;
 	background-color: #ffffff;
-    /*cursor:crosshair;*/
-
 }
 table td{
 	border:1px solid #111111;
 	height:22px;
-
 }
 .topTd{
 	background-color: #C8D8FA;
@@ -22,27 +20,17 @@ table td{
 }
 .toptr{
 	text-align: center;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-.tdtime{
-	padding: 0px;
-	width:128px;
 }
 .tadata{
 	text-align: right;
 	font-size: 13px;
-	width:130px;
-	font-family: 宋体;
+	font-family: '宋体';
 }
 .green{
 	background-color: #CFFDCE;
 }
 .tdgray{
 	background-color: #C0C0C0;
-}
-#columns{
-	width:80px;
 }
 .titletr{
 	font-size: 12px;
