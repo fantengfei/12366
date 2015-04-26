@@ -3,7 +3,9 @@ body{
 	padding:0px;
 }
 #bodydiv{
-
+	/*	width:950px;
+	height:100%;
+	float:left;*/
 }
 table{
 	border-collapse: collapse;
@@ -14,22 +16,31 @@ table td{
 	border:1px solid #111111;
 	height:22px;
 }
-.topTd{
+/*数据靠左*/
+.text-left{
+	text-align: left;
+}
+/*表头单元格背景样式*/
+.gauge-style{
 	background-color: #C8D8FA;
 	font-size: 12px;
 }
-.toptr{
+/*数据居中*/
+.text-center{
 	text-align: center;
 }
-.tadata{
+/*数据部分样式 --默认右边显示*/
+.tddata{
 	text-align: right;
 	font-size: 13px;
 	font-family: '宋体';
 }
+/*绿色*/
 .green{
 	background-color: #CFFDCE;
 }
-.tdgray{
+/*灰色*/
+.gray{
 	background-color: #C0C0C0;
 }
 .titletr{
@@ -80,4 +91,8 @@ table td{
     padding-top:10px;
     vertical-align: text-top;
     border-bottom:0px solid;
+}
+/*--样式*/
+.none-center{
+    margin-right:50px;
 }

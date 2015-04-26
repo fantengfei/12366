@@ -1,11 +1,6 @@
 <extend name="TableNode1/base"/>
 <block name="blocktable">
-<style>
-       .none-center{
-                margin-right:50px;
-       }
-</style>
-<table id="bodytable">
+<table id="bodytable" width='2100px;'>
 	<tr class='titletr title-notic'>
 		<td colspan = '7' id='titletd'>增值税纳税申请表</td>
 	</tr>
@@ -37,422 +32,1326 @@
 		<td colspan = '1'>金额单位：元至角分</td>
 	</tr>
 	<tr>
-		<td class='topTd toptr' colspan = '4' rowspan = '3'>项目</td>
-		<td class='topTd toptr' colspan = '2'>开具税控增值税专用发票 </td>
-		<td class='topTd toptr' colspan = '2'>开具其他发票</td>
-        <td class='topTd toptr' colspan = '2'>未开具其他发票</td>
-        <td class='topTd toptr' colspan = '2'>纳税检查调整</td>
-        <td class='topTd toptr' colspan = '3'>合计</td>
-        <td class='topTd toptr' rowspan = '2'>服务扣除项目本期实际扣除金额</td>
-        <td class='topTd toptr' colspan = '2'>扣除后</td>
+		<td class='gauge-style text-center' colspan = '4' rowspan = '3'>项目</td>
+		<td class='gauge-style text-center' colspan = '2'>开具税控增值税专用发票 </td>
+		<td class='gauge-style text-center' colspan = '2'>开具其他发票</td>
+        <td class='gauge-style text-center' colspan = '2'>未开具其他发票</td>
+        <td class='gauge-style text-center' colspan = '2'>纳税检查调整</td>
+        <td class='gauge-style text-center' colspan = '3'>合计</td>
+        <td class='gauge-style text-center' rowspan = '2'>服务扣除项目本期实际扣除金额</td>
+        <td class='gauge-style text-center' colspan = '2'>扣除后</td>
 	</tr>
 	<tr >
-		<td class='topTd toptr tdtime' >本月数</td>
-		<td class='topTd toptr tdtime' >本年统计</td>
-		<td class='topTd toptr tdtime' >本月数</td>
-		<td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
+		<td class='gauge-style text-center' >销售额</td>
+		<td class='gauge-style text-center' >销项（应税）税额</td>
+		<td class='gauge-style text-center' >销售额</td>
+		<td class='gauge-style text-center' >销项（应税）税额</td>
+        <td class='gauge-style text-center' >销售额</td>
+        <td class='gauge-style text-center' >销项（应税）税额</td>
+        <td class='gauge-style text-center' >销售额</td>
+        <td class='gauge-style text-center' >销项（应税）税额</td>
+        <td class='gauge-style text-center' >销售额</td>
+        <td class='gauge-style text-center' >销项（应税）税额</td>
+        <td class='gauge-style text-center' >价税合计</td>
+        <td class='gauge-style text-center' >含税（免税）销售额</td>
+        <td class='gauge-style text-center' >销项（应纳税额）</td>
 	</tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='gauge-style text-center' width='120px'>1</td>
+        <td class='gauge-style text-center' width='120px'>2</td>
+        <td class='gauge-style text-center' width='120px'>3</td>
+        <td class='gauge-style text-center' width='120px'>4</td>
+        <td class='gauge-style text-center' width='120px'>5</td>
+        <td class='gauge-style text-center' width='120px'>6</td>
+        <td class='gauge-style text-center' width='120px'>7</td>
+        <td class='gauge-style text-center' width='120px'>8</td>
+        <td class='gauge-style text-center' width='120px'>9=1+3+5+7</td>
+        <td class='gauge-style text-center' width='120px'>10=2+4+6+8</td>
+        <td class='gauge-style text-center' width='120px'>11=9+10</td>
+        <td class='gauge-style text-center' width='120px'>12</td>
+        <td class='gauge-style text-center' width='120px'>13=11-12</td>
+        <td class='gauge-style text-center' width='120px'>14=13/(100%+税率+征收率)*税率(征收率)</td>
+    </tr>
+    <tr>
+        <td class='gauge-style text-center' width='32px' rowspan="7">一：一般计税方法计税</td>
+        <td class='gauge-style text-center' width='42px' rowspan="5">全部征税项目</td>
+        <td class='gauge-style gauge-styleLeft' width='199px'>17%征税的货物即加工修理修配劳务</td>
+        <td class='gauge-style text-center' width='26px'>1</td>
+        <td class='tddata ' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr>
+        <td class='gauge-style gauge-styleLeft' >17%征税的货物即加工修理</td>
+        <td class='gauge-style text-center' >2</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
     </tr>
     <tr >
-        <td rowspan="7">dasdasd</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+
+        <td class='gauge-style gauge-styleLeft' >17%征税的货物即加工修理</td>
+        <td class='gauge-style text-center' >3</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+ 
+        <td class='gauge-style gauge-styleLeft' >13%征税</td>
+        <td class='gauge-style text-center' >4</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+
+        <td class='gauge-style gauge-styleLeft' >17%征税</td>
+        <td class='gauge-style text-center' >5</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+    <td class='gauge-style text-center' rowspan="2">其中即征即退项目</td>
+        <td class='gauge-style gauge-styleLeft' >即征即退货物及加工修理修配劳务</td>
+        <td class='gauge-style text-center' >6</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='gauge-style gauge-styleLeft' >即征即退应税服务</td>
+        <td class='gauge-style text-center' >7</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+
+        <tr>
+        <td class='gauge-style text-center' width='32px' rowspan="10">二：简易计税方法计税</td>
+        <td class='gauge-style text-center' width='42px' rowspan="8">全部征税项目</td>
+        <td class='gauge-style gauge-styleLeft' width='199px'>17%征税的货物即加工修理修配劳务</td>
+        <td class='gauge-style text-center' width='26px'>8</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+
+        <td class='gauge-style gauge-styleLeft' >17%征税的货物即加工修理</td>
+        <td class='gauge-style text-center' >9</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
     </tr>
     <tr >
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本月数</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计</td>
-        <td class='topTd toptr tdtime' >本年统计1</td>
-        <td class='topTd toptr tdtime' >本年统计2</td>
-        <td class='topTd toptr tdtime' >本年统计3</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
-        <td class='topTd toptr tdtime' >本年统计4</td>
+
+        <td class='gauge-style gauge-styleLeft' >17%征税的货物即加工修理</td>
+        <td class='gauge-style text-center' >10</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
     </tr>
-	<tr>
-		<td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
-		<td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
-		<td class='topTd' >1</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>13,505,080,88</div>
-		</td>
-		<td class ='tadata tdgray icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >其中：应税货物销售额</td>
-		<td class='topTd' >2</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >应税劳务销售额</td>
-		<td class='topTd' >3</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >纳税检查调整的销售额</td>
-		<td class='topTd' >4</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >（二）按简易办法计税的销售额</td>
-		<td class='topTd' >5</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >其中：纳税检查调整的销售额</td>
-		<td class='topTd' >6</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >（三）免，抵，退办法出口销售额&nbsp; &nbsp; &nbsp;</td>
-		<td class='topTd' >7</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >（四）免税销售额</td>
-		<td class='topTd' >8</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >其中：免税货物销售额</td>
-		<td class='topTd' >9</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >免税劳务销售额</td>
-		<td class='topTd' >10</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata none-center'>--</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' rowspan = '2'></td>
-		<td class='topTd' >销项税额</td>
-		<td class='topTd' >11</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>2,295,863,81</div>
-		</td>
-		<td class ='tadata tdgray icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
-	<tr>
-		<td class='topTd' >进项税额</td>
-		<td class='topTd' >12</td>
-		<td class ='tadata icon'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata green'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata tdgray'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-		<td class ='tadata'>
-			<div class='divimage'></div>
-			<div class='divdata'>0.00</div>
-		</td>
-	</tr>
+    <tr >
+ 
+        <td class='gauge-style gauge-styleLeft' >13%征税</td>
+        <td class='gauge-style text-center' >11</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr >
+
+        <td class='gauge-style gauge-styleLeft' >17%征税</td>
+        <td class='gauge-style text-center' >12</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+    <tr >
+
+        <td class='gauge-style gauge-styleLeft' >17%征税</td>
+        <td class='gauge-style text-center' >13a</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+    <tr >
+
+        <td class='gauge-style gauge-styleLeft' >17%征税</td>
+        <td class='gauge-style text-center' >13b</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+    <tr >
+
+        <td class='gauge-style gauge-styleLeft' >17%征税</td>
+        <td class='gauge-style text-center' >13c</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+    <tr >
+    <td class='gauge-style text-center' rowspan="2">其中即征即退项目</td>
+        <td class='gauge-style gauge-styleLeft' >即征即退货物及加工修理修配劳务</td>
+        <td class='gauge-style text-center' >14</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr >
+        <td class='gauge-style gauge-styleLeft' >即征即退应税服务</td>
+        <td class='gauge-style text-center' >15</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+    </tr>
+
+    <tr >
+	    <td class='gauge-style text-center' rowspan="2" >三：免抵退税</td>
+	    <td class='gauge-style gauge-styleLeft' colspan="2">货物及加工修理修配服务</td>
+        <td class='gauge-style text-center' >16</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr >
+	    <td class='gauge-style gauge-styleLeft' colspan="2">应税服务</td>
+        <td class='gauge-style text-center' >17</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr >
+	    <td class='gauge-style text-center' rowspan="2">四：免税</td>
+	    <td class='gauge-style gauge-styleLeft' colspan="2" >货物及加工修理修配服务</td>
+        <td class='gauge-style text-center' >18</td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
+    <tr >
+	    <td class='gauge-style gauge-styleLeft' colspan="2">应税服务</td>
+        <td class='gauge-style text-center' >19</td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+     </td>
+        <td class='tddata gray' >
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+     </td>
+    </tr>
 </table>
 </block>
 </extend>

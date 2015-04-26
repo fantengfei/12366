@@ -21,7 +21,7 @@ function addinput(obj){
 	if(inputlength > 0){
 		return false;
 	}
-	if(obj.hasClass('tadata')){
+	if(obj.hasClass('tddata')){
 		var string = obj.children('.divdata').html();
 	}else{
 		var string = obj.html();
