@@ -1,5 +1,10 @@
 <extend name="TableNode1/base"/>
 <block name="blocktable">
+<style>
+       .none-center{
+                margin-right:50px;
+       }
+</style>
 <table id="bodytable">
 	<tr class='titletr title-notic'>
 		<td colspan = '7' id='titletd'>增值税纳税申请表</td>
@@ -32,17 +37,180 @@
 		<td colspan = '1'>金额单位：元至角分</td>
 	</tr>
 	<tr>
-		<td class='topTd toptr' colspan = '2' rowspan = '2'>项目</td>
-		<td class='topTd toptr' rowspan = '2' id="columns" style='width:80px;'>栏次</td>
-		<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
-		<td class='topTd toptr' colspan = '2'>一般货物，劳务应税服务</td>
+		<td class='topTd toptr' colspan = '4' rowspan = '3'>项目</td>
+		<td class='topTd toptr' colspan = '2'>开具税控增值税专用发票 </td>
+		<td class='topTd toptr' colspan = '2'>开具其他发票</td>
+        <td class='topTd toptr' colspan = '2'>未开具其他发票</td>
+        <td class='topTd toptr' colspan = '2'>纳税检查调整</td>
+        <td class='topTd toptr' colspan = '3'>合计</td>
+        <td class='topTd toptr' rowspan = '2'>服务扣除项目本期实际扣除金额</td>
+        <td class='topTd toptr' colspan = '2'>扣除后</td>
 	</tr>
 	<tr >
 		<td class='topTd toptr tdtime' >本月数</td>
 		<td class='topTd toptr tdtime' >本年统计</td>
 		<td class='topTd toptr tdtime' >本月数</td>
 		<td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
 	</tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td rowspan="7">dasdasd</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
+    <tr >
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本月数</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计</td>
+        <td class='topTd toptr tdtime' >本年统计1</td>
+        <td class='topTd toptr tdtime' >本年统计2</td>
+        <td class='topTd toptr tdtime' >本年统计3</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+        <td class='topTd toptr tdtime' >本年统计4</td>
+    </tr>
 	<tr>
 		<td class='topTd toptr' rowspan = '10' style='width:36px;' >销售额</td>
 		<td class='topTd' style='width:210px;' >（一）按使用税率计算销售额</td>
@@ -177,11 +345,11 @@
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 	</tr>
 	<tr>
@@ -197,11 +365,11 @@
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 	</tr>
 	<tr>
@@ -217,11 +385,11 @@
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 	</tr>
 	<tr>
@@ -237,11 +405,11 @@
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 		<td class ='tadata tdgray'>
 			<div class='divimage'></div>
-			<div class='divdata'>--&nbsp; &nbsp; &nbsp; &nbsp;</div>
+			<div class='divdata none-center'>--</div>
 		</td>
 	</tr>
 	<tr>
