@@ -20,15 +20,20 @@ table td{
 .text-left{
 	text-align: left;
 }
+/*数据居中*/
+.text-center{
+	text-align: center;
+}
+/*数据居中*/
+.text-right{
+	text-align: right;
+}
 /*表头单元格背景样式*/
 .gauge-style{
 	background-color: #C8D8FA;
 	font-size: 12px;
 }
-/*数据居中*/
-.text-center{
-	text-align: center;
-}
+
 /*数据部分样式 --默认右边显示*/
 .tddata{
 	text-align: right;
@@ -42,6 +47,10 @@ table td{
 /*灰色*/
 .gray{
 	background-color: #C0C0C0;
+}
+/*字体蓝色*/
+.color-blue{
+	color:#0000FC;
 }
 .titletr{
 	font-size: 12px;
@@ -97,9 +106,9 @@ table td{
     margin-right:50px;
 }
 /*字体样式*/
-.text-color{
+.color-red{
 	color:red;
 }
-.text-font{
+.font-weight{
 	font-weight: 600;
 }
