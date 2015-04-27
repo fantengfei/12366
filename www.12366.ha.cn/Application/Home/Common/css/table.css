@@ -11,10 +11,14 @@ table{
 	border-collapse: collapse;
 	border:0px solid #111111;
 	background-color: #ffffff;
+    padding:0px;
+    border-spacing:0;
 }
 table td{
 	border:1px solid #111111;
 	height:22px;
+    padding: 0px;
+    border-spacing:0;
 }
 /*数据靠左*/
 .text-left{
@@ -111,4 +115,10 @@ table td{
 }
 .font-weight{
 	font-weight: 600;
+}
+
+
+/*鼠标移到td元素上添加黑色边框*/
+.black-border{
+    border: 2px solid #000;
 }

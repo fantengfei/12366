@@ -1,5 +1,14 @@
+
 $("#bodytable td").dblclick(function(){
 	addinput($(this));
+});
+
+$("#bodytable td").mousemove(function(e){
+    $(this).addClass('black-border');
+});
+
+$("#bodytable td").mouseleave(function(e){
+    $(this).removeClass('black-border');
 });
 
 function saveinput(obj){
@@ -17,17 +26,17 @@ function saveinput(obj){
 }
 
 function addinput(obj){
-	var inputlength = obj.children('input').length
+	var inputlength = obj.children('textarea').length
 	if(inputlength > 0){
 		return false;
 	}
 	if(obj.hasClass('tddata')){
 		var string = obj.children('.divdata').html();
+
 	}else{
 		var string = obj.html();
 	}
-	var length = parseInt(obj.width())-10;
 	var color = obj.css('background-color');
-	obj.html('<input type="text" style="border:0px solid #666666;font-size:13px;font-family: 宋体;height:15px;background-color:'+color+';width:'+length+'px;"  id="editinput" value="'+string+'" onblur="saveinput($(this))" />');
+	obj.html('<textarea style="resize:none; border:0px solid #666666;margin:0px;font-size:13px;font-family: 宋体;height:90%;background-color:'+color+';width:90%;" id="editinput" onblur="saveinput($(this))" >'+string+'</textarea>');
 	$("#editinput").focus();
 }
