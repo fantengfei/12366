@@ -3,14 +3,6 @@ $("#bodytable td").dblclick(function(){
 	addinput($(this));
 });
 
-$("#bodytable td").mousemove(function(e){
-    $(this).addClass('black-border');
-});
-
-$("#bodytable td").mouseleave(function(e){
-    $(this).removeClass('black-border');
-});
-
 function saveinput(obj){
 	var string = obj.val();
 	parentobj = obj.parent();
@@ -23,6 +15,8 @@ function saveinput(obj){
 	}else{
 		parentobj.html(string);
 	}
+
+    obj.removeClass('black-border');
 }
 
 function addinput(obj){
@@ -39,4 +33,5 @@ function addinput(obj){
 	var color = obj.css('background-color');
 	obj.html('<textarea style="resize:none; border:0px solid #666666;margin:0px;font-size:13px;font-family: 宋体;height:90%;background-color:'+color+';width:90%;" id="editinput" onblur="saveinput($(this))" >'+string+'</textarea>');
 	$("#editinput").focus();
+    obj.addClass('black-border');
 }
