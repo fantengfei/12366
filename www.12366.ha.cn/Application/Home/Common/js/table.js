@@ -20,8 +20,9 @@ function saveinput(obj){
 }
 
 function addinput(obj){
-	var inputlength = obj.children('textarea').length
-	if(inputlength > 0){
+	var textarealength = obj.children('textarea').length;
+	var inputlength    = obj.children('input').length;
+	if(textarealength > 0 || inputlength > 0){
 		return false;
 	}
 	if(obj.hasClass('tddata')){

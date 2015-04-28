@@ -57,24 +57,29 @@
                             url: "__APP__/Home/TableNode1/table9"
                         }]
                     },{
-                        text:'增值税农产品核定抵扣（增值税一般纳税人使用）',
-                        border:false
-                    },{
-                        text:'居民企业所得税（据实预缴新）',
-                        border: false
-                    },{
-                        text:'一般企业财务报表',
-                        border:false
-                    },{
-                        text: '海关稽核',
-                        border: false
-                    },{
-                        text:'申报、实时扣款',
-                        border:false
-
-                    },{
-                        text: '查询打印',
-                        border: false
+                        text: "增值税农产品核定抵扣（增值税一般纳税人使用）",
+                        expanded: true,
+                        children: [{
+                            text: "农产品核定扣除增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table1"
+                        },{
+                            text: "投入产出法核定农产品增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table2"
+                        },{
+                            text: "成本法核定增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table3"
+                        },{
+                            text: "购进农产品直接销售核定农产品增值税",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table4"
+                        },{
+                            text: "购进农产品用于生产经营且不构成货物实体核定",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table5"
+                        }]
                     }]
                 }
             })

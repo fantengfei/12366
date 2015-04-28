@@ -122,3 +122,7 @@ table td{
 .black-border{
     border: 2px solid #000;
 }
+/*背景色*/
+.bgcol-write{
+	background-color: #ffffff;
+}
