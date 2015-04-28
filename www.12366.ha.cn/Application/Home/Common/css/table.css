@@ -120,7 +120,7 @@ table td{
 
 /*鼠标移到td元素上添加黑色边框*/
 .black-border{
-    border: 2px solid #000;
+    border: 2px solid #fff;
 }
 /*背景色*/
 .bgcol-write{

@@ -6,6 +6,7 @@ $("#bodytable td").dblclick(function(){
 function saveinput(obj){
 	var string = obj.val();
 	parentobj = obj.parent();
+    //parentobj.removeClass('black-border');
 	if(obj.parent().hasClass('tddata')){
 		if($.trim(string) == '' || $.trim(string) == '--'){
 			parentobj.html("<div class='divimage'></div><div class='divdata none-center'>--</div>");
@@ -15,8 +16,6 @@ function saveinput(obj){
 	}else{
 		parentobj.html(string);
 	}
-
-    obj.removeClass('black-border');
 }
 
 function addinput(obj){
@@ -34,5 +33,5 @@ function addinput(obj){
 	var color = obj.css('background-color');
 	obj.html('<textarea style="resize:none; border:0px solid #666666;margin:0px;font-size:13px;font-family: 宋体;height:90%;background-color:'+color+';width:90%;" id="editinput" onblur="saveinput($(this))" >'+string+'</textarea>');
 	$("#editinput").focus();
-    obj.addClass('black-border');
+    //obj.addClass('black-border');
 }
