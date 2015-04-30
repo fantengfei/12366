@@ -126,3 +126,11 @@ table td{
 .bgcol-write{
 	background-color: #ffffff;
 }
+
+.border-left-right{
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+.border-bottom{
+	border-bottom: 1px solid;
+}
