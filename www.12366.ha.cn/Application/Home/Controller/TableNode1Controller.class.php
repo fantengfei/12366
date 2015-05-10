@@ -12,7 +12,7 @@
 
 namespace Home\Controller;
 use Think\Controller;
-class TableNode1Controller extends Controller {
+class TableNode1Controller extends BaseController {
 
     public function index() {
         $this->show();

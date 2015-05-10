@@ -25,7 +25,25 @@
         listeners: {
             click: {
                 fn: function() {
-                    alert(Ext.get('bodytable').getHtml());
+                    var content_html = Ext.get('bodydiv').getHtml();
+                    var table_name = Ext.get('titletd').getHtml();
+                    var table_status = $('#table_status').val();
+                    Ext.Ajax.request({
+                        url: '__ROOT__/index.php/Home/Index/save_table',
+                        params: {
+                            content: content_html,
+                            table_name:table_name,
+                            table_status:table_status
+                        },
+                        success: function(response){
+                            var text = response.responseText;
+                            if(text == 'success'){
+                                alert("保存成功！");
+                            }else{
+                                alert("保存失败！");
+                            }
+                        }
+                    });
                 }
             }
         }
