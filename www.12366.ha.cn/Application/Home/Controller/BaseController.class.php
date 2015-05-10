@@ -11,7 +11,7 @@ class BaseController extends Controller {
         $this->assign('table_info',$this->getData($url));
    }
 
-   public function getData($url){
+   public function getData($url){ 
         if(empty($url)){
             return false;
         }
