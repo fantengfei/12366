@@ -20,11 +20,27 @@ class TableNode1Controller extends BaseController {
 
     // 增值纳税申报表（一般个人使用）
     public function table1() {
-        $this->display('table1');
+        $table_data = $this->getData($this->get_url());
+        //数据库中无数据或者数据不是本月最新，则显示一张新表格
+        if(empty($table_data)){
+            $this->display('table1');
+        }else{
+            //数据库中已有数据，直接呈现
+            $this->assign('table_data',$table_data);
+            $this->display('Default:content');
+        } 
     }
 
     public  function  table2() {
-        $this->display('table2');
+        $table_data = $this->getData($this->get_url());
+        //数据库中无数据或者数据不是本月最新，则显示一张新表格
+        if(empty($table_data)){
+            $this->display('table2');
+        }else{
+            //数据库中已有数据，直接呈现
+            $this->assign('table_data',$table_data);
+            $this->display('Default:content');
+        } 
     }
 
     public  function  table3() {
