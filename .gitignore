@@ -3,3 +3,4 @@ Runtime/
 .DS_Store
 doc/
 .idea/
+/config.php
