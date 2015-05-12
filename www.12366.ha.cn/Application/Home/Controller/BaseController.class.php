@@ -4,14 +4,38 @@ namespace Home\Controller;
 use Think\Controller;
 class BaseController extends Controller {
 
-   function _initialize(){
-        //获得操作的合法路径
+  private $status = false;
+
+  //初始化表格数据
+  function _initialize(){
+        //根据url拿数据
+        $table_data = $this->getData($this->get_url());
+        //返回前台请求的url标识
         $this->assign('table_url',$this->get_url());
+        if(empty($table_data)){
+            //无数据
+            $this->status = true;
+        }else{
+            $this->status = false;
+            $this->assign('table_data',$table_data);
+        }
+        
    }
 
    public function get_url(){
         return CONTROLLER_NAME . '/' . ACTION_NAME;
    }
+
+   public function judge_return(){
+        var_dump($this->status);
+        if($this->status){
+            //数据库中无数据或者数据不是本月最新，则显示一张新表格
+            return 'table1';
+        }else{
+            //数据库中已有数据，直接呈现
+            return 'Default:content';
+        } 
+    }
 
    public function getData($url){
 

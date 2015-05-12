@@ -20,22 +20,22 @@ class TableNode2Controller extends BaseController {
 
     // 增值纳税申报表（一般个人使用）
     public function table1() {
-        $this->display('table1');
+        $this->display($this->judge_return());
     }
 
     public  function  table2() {
-        $this->display('table2');
+        $this->display($this->judge_return());
     }
 
     public  function  table3() {
-        $this->display('table3');
+        $this->display($this->judge_return());
     }
 
     public  function  table4() {
-        $this->display('table4');
+        $this->display($this->judge_return());
     }
 
     public  function  table5() {
-        $this->display('table5');
+        $this->display($this->judge_return());
     }
 }

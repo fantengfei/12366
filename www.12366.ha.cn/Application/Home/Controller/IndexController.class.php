@@ -45,8 +45,7 @@ class IndexController extends BaseController {
 	    		echo 'success';
 	    	}
     	}else{
-    		//如果已经存在，则更新
-    		$data['update_time'] = time();
+    		//如果已经存在，则更新表格数据
     		$result = M()->table('table_info')->where($where)->save($data);
 	    	if($result){
 	    		echo 'success';
