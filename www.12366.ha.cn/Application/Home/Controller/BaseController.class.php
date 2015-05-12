@@ -29,7 +29,7 @@ class BaseController extends Controller {
    public function judge_return(){
         if($this->status){
             //数据库中无数据或者数据不是本月最新，则显示一张新表格
-            return 'table1';
+            return ACTION_NAME;
         }else{
             //数据库中已有数据，直接呈现
             return 'Default:content';
