@@ -13,6 +13,13 @@ use Think\Controller;
 class PrintController extends Controller {
 
     public function index() {
+
+
+
+
+//        $result = M()->table('table_info')->where($where)->select();
+
+
         $this->show();
     }
 

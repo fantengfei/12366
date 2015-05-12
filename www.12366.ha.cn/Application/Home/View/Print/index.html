@@ -3,25 +3,92 @@
 <head lang="en">
     <meta charset="UTF-8">
     <include file="Public/Home/headFile.html" />
+    <link rel="stylesheet" type="text/css" href="__COMMON__/css/tableList.css" media="all">
     <style type="text/css">
-        .top-tool{border: 1px solid #ccc; height: 40px; width: 100%;}
-        td{text-align: center;}
+        .top-tool{border: 1px solid #ccc; height: 35px; width: 100%;}
+        .top-tool td{text-align: center;}
+        #button-search{margin-left: 5px;;padding-top:2px; text-align:center; font-size:9pt;  text-decoration: none;display:block;width: 75px;height: 23px; background: url("__COMMON__/icon/button_bg.jpg") no-repeat; color: #000;}
+        .help-icon{width:25px;height: 25px;background: url("__COMMON__/icon/help_bg.jpg"); float: right; margin-right: 5px;}
+        .line-dotted{ margin-top: 5px; background: url("__COMMON__/icon/line_bg.jpg") repeat; height: 1px;}
     </style>
     <script type="text/javascript">
 
+        function getCurrentMonthLastDay(){
+            var current=new Date();
+            var currentMonth=current.getMonth();
+            var nextMonth=++currentMonth;
+            var nextMonthDayOne =new Date(current.getFullYear(),nextMonth,1);
+            var minusDate=1000*60*60*24;
+            return new Date(nextMonthDayOne.getTime()-minusDate);
+        }
+
+        Ext.onReady(function () {
+            Ext.create('Ext.form.DateField', {
+                width: 90,
+                renderTo: 'start-time',
+                format: 'Y-m-d',
+                editable: false,
+                allowBlank: false,
+                emptyText: Ext.Date.format(new Date(), 'Y-m-d')
+            });
+        });
+        Ext.onReady(function () {
+            Ext.create('Ext.form.DateField', {
+                width: 90,
+                renderTo: 'end-time',
+                format: 'Y-m-d',
+                editable: false,
+                allowBlank: false,
+                emptyText: Ext.Date.format(getCurrentMonthLastDay(), 'Y-m-d')
+            });
+        });
     </script>
 </head>
 <body style="background-color:#FFFFFF; ">
-    <table class="top-tool" rules="cols">
+    <table class="top-tool" rules="all">
         <tr>
-            <td width="150px">申报日期</td>
+            <td width="160px">
+                <input checked type="radio" value="申报日期" name="radio">&nbsp;申报日期&nbsp;
+                <input type="radio" value="所属日期" name="radio">&nbsp;所属日期&nbsp;
+            </td>
             <td width="80px">开始日期：</td>
             <td id="start-time" width="100px"></td>
             <td width="80px">结束日期：</td>
             <td id="end-time" width="100px"></td>
-            <td width="200px;"> </td>
-            <td></td>
+            <td width="150px;" style="text-align: left;">
+                <a href="#" id="button-search">查询(Q)</a>
+            </td>
+            <td>
+                <div class="help-icon"></div>
+            </td>
         </tr>
     </table>
+
+    <div class="line-dotted"></div>
+
+    <div class="div-frame-list-root" style="margin-top: 5px">
+        <table class="table-list" rules="all">
+            <tr class="tr-head">
+                <th width="60px">序号</th>
+                <th width="100px">所属日起</th>
+                <th width="100px">所属期止</th>
+                <th width="350px" class="long-td">报表类型名称</th>
+                <th class="th-empty">&nbsp;</th>
+            </tr>
+        </table>
+    </div>
+    <div class="div-frame-list-root" style="margin-top: 10px">
+        <table class="table-list" rules="all">
+            <tr class="tr-head">
+                <th width="60px">序号</th>
+                <th width="100px">所属日起</th>
+                <th width="100px">所属期止</th>
+                <th width="350px" class="long-td">报表类型名称</th>
+                <th width="150px">操作</th>
+                <th class="th-empty">&nbsp;</th>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
