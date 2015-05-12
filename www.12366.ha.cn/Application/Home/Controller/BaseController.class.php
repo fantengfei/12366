@@ -27,7 +27,6 @@ class BaseController extends Controller {
    }
 
    public function judge_return(){
-        var_dump($this->status);
         if($this->status){
             //数据库中无数据或者数据不是本月最新，则显示一张新表格
             return 'table1';
