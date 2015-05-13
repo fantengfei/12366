@@ -2,6 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <script src="__COMMON__/js/jquery-1.4.3.min.js"></script>
     <style type="text/css">
         .operation { height: 59px;border: solid 0px #ccc;  background: #1a54a6 url('__COMMON__/icon/kuangjia.jpg') no-repeat;}
         .userinfo {background-color: #2da1e6; text-align: left; padding: 7px 0px 8px 10px; background:url('__COMMON__/icon/top-line.png');}
@@ -10,6 +11,21 @@
         .button-bg{height: 22px; text-align: right;}
         a:hover{text-decoration: underline;}
     </style>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#d-name').dblclick(function(){
+                var value = $(this).text();
+                $(this).html('<input id="input-name" type="text" value="'+value+'"/>');
+                $('#input-name').focus();
+                $('#input-name').blur(function () {
+                    var name = $('#input-name').val()
+                    $('#d-name').html($('#input-name').val());
+                    $.post("__APP__/Home/Default/save_name", {name: name}, function (data) {
+                    },'json');
+                });
+            });
+        });
+    </script>
 </head>
 
 <body style="margin: 0; padding: 0;">
@@ -37,7 +53,7 @@
     </div>
 </div>
 <div class="userinfo">
-    <b style="font-size: 12px; color: #fff;">登陆用户［河南起重机器有限公司］</b>
+    <b style="font-size: 12px; color: #fff;">登陆用户［<b id="d-name">{$web_name|default="河南起重机器有限公司"}</b>］</b>
 </div>
 </body>
 
