@@ -34,4 +34,8 @@ class TableNode4Controller extends BaseController {
     public  function  table4() {
         $this->display($this->judge_return());
     }
+
+    public function table5() {
+        $this->display($this->judge_return());
+    }
 }
