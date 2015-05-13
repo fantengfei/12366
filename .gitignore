@@ -3,5 +3,3 @@ Runtime/
 .DS_Store
 doc/
 .idea/
-/config.php
-/www.12366.ha.cn/Application/Common/Conf/*
