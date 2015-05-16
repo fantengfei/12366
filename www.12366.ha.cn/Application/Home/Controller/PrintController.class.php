@@ -45,9 +45,9 @@ class PrintController extends Controller {
 
 
         $where_field = 'create_time';
-        if ($select_type == 1) {
-            $where_field = 'update_time';
-        }
+//        if ($select_type == 1) {
+//            $where_field = 'update_time';
+//        }
 
         $where['_string'] = " ($where_field > $start_time or $where_field = $start_time) and ($where_field < $end_time or $where_field = $end_time) ";
 
@@ -106,6 +106,18 @@ class PrintController extends Controller {
         }
 
         return false;
+
+    }
+
+
+
+
+    public function showTable() {
+
+        $id = $_GET['id'];
+        $result = M('table_info')->field('table_data')->where("id=$id")->select();
+        $this->assign("data",  html_entity_decode($result[0]['table_data']));
+        $this->display('showTable');
 
     }
 

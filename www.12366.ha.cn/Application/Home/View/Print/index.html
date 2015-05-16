@@ -82,7 +82,12 @@
                             $("#table-list-data tr:gt(0)").remove();
                             var coun = array.length;
                             for(var i=0;i<coun; i++) {
-                                $('#table-root-list').append('<tr> <td>'+parseInt(i+1)+'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].root_name+'</td> </tr>');
+                                if (i%2==0){
+                                    $('#table-root-list').append('<tr> <td>'+parseInt(i+1)+'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].root_name+'</td> </tr>');
+                                } else {
+                                    $('#table-root-list').append('<tr style="background-color: #f9f9f9;"> <td>'+parseInt(i+1)+'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].root_name+'</td> </tr>');
+                                }
+
                             }
                         }
 
@@ -115,13 +120,29 @@
                         $("#table-list-data tr:gt(0)").remove();
                         var coun = array.length;
                         for(var i=0;i<coun; i++) {
-                            $('#table-list-data').append('<tr> <td>'+ parseInt(i+1) +'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].table_name+'</td> <td> <a id="'+i+'" class="a-print" href="#">打印</a></td> </tr>');
+                            if (i%2==0){
+                                $('#table-list-data').append('<tr> <td>'+ parseInt(i+1) +'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].table_name+'</td> <td> <a id="'+i+'" class="a-print" href="#">打印</a></td> </tr>');
+                            } else {
+                                $('#table-list-data').append('<tr style="background-color: #f9f9f9;"> <td>'+ parseInt(i+1) +'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].table_name+'</td> <td> <a id="'+i+'" class="a-print" href="#">打印</a></td> </tr>');
+                            }
+
                         }
                     }
 
                     $(".a-print").click(function(){
-//                        alert(array[$(this).attr('id')].table_data);
-                        alert($('#bodydiv').html());
+                        var win = new top.Ext.Window({
+                            title: "<b>打印</b>",
+                            layout:'fit',
+                            height: 500,
+                            width: 800,
+                            closeAction:'close',
+                            plain: true,
+                            autoScroll: true,
+                            modal : true,
+                            html : '<iframe id="ifrm" style="padding:0; background-color: #fff;" scrolling="no" frameborder="0" width="100%" height= "99.7%" src="__APP__/Home/Print/showTable?id='+array[$(this).attr('id')].id+'"></iframe>'
+                        });
+
+                        win.show(this);
                     });
                 }
             });
@@ -152,7 +173,7 @@
 
     <div class="line-dotted"></div>
 
-    <div id="table_root" class="div-frame-list-root" style="margin-top: 5px; overflow: 'auto'">
+    <div id="table_root" class="div-frame-list-root" style="margin-top: 5px; overflow: 'auto'; height: 200px;">
         <table class="table-list" id="table-root-list" rules="all">
             <tr class="tr-head">
                 <th width="60px">序号</th>
@@ -163,16 +184,18 @@
             </tr>
             <php>$n=1;</php>
             <foreach name="table_root_list" item="vo">
-                <tr>
-                    <td>{$n}</td>
+                <if condition="$n % 2 eq 0">
+                    <tr style="background-color:#f9f9f9;">
+                </if>
+                    <td>{$n++}</td>
                     <td>{$vo[start_time]}</td>
                     <td>{$vo[end_time]}</td>
-                    <td class="long-td">{$vo[root_name]}</td>
+                <td class="long-td">{$vo[root_name]}</td>
                 </tr>
             </foreach>
         </table>
     </div>
-    <div class="div-frame-list-root" style="margin-top: 10px; height: 400px;">
+    <div class="div-frame-list-root" style="margin-top: 10px; height: 300px;">
         <table class="table-list" id="table-list-data" rules="all">
             <tr class="tr-head">
                 <th width="60px">序号</th>

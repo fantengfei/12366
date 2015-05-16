@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="__COMMON__/css/table-print.css" media="all">
+    <script src="__COMMON__/js/jquery-1.4.3.min.js"></script>
+    <style type="text/css">
+        .a-button{color: #000;text-decoration: none;padding-top: 4px;display: inline-block; height: 25px; font-size: 12px; text-align: right; border: 0px solid #ccc;}
+        .explort-button{padding-right: 17px;background: url("__COMMON__/icon/explort-bg.jpg") no-repeat;width: 63px; }
+        .print-button{margin-top:5px;;background: url("__COMMON__/icon/print-bg.jpg") no-repeat; margin-left: 5px; width: 60px;}
+        .a-button:hover{text-decoration: underline;}
+    </style>
+    <script type="application/javascript">
+        $(document).ready(function () {
+            $('.data-div').height(500-64);
+        });
+    </script>
+</head>
+<body style="padding: 0; margin: 0;">
+    <div style="background: url('__COMMON__/icon/tool-bg.jpg') repeat; height: 28px;">
+        <a class="a-button print-button" href="#">打印</a>
+        <a class="a-button explort-button" href="#">导出</a>
+    </div>
+    <div class="data-div" style="width: 100%; overflow: auto;">
+        {$data}
+    </div>
+</body>
+</html>
