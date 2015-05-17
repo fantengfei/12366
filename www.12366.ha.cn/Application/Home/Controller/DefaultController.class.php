@@ -26,6 +26,7 @@ class DefaultController extends Controller {
         $data['table_data'] = I('post.name');
         $data['table_type'] = 3;
         $data['table_url']  = I('post.name');
+        $data['create_time'] = 0;
 
         $result = M('table_info')->field('table_name')->where('table_type=3')->find();
 

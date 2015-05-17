@@ -19,8 +19,7 @@ class PrintController extends Controller {
         $end_time   = strtotime("$start +1 month -1 day");
         $start_time = strtotime($start);
         $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") ";
-        $result = M()->table('table_info')->field('id,root_name,create_time,table_type')->where($where)->group('root_name')->select();
-
+        $result = M('table_info')->table('table_info')->field("id,root_name,create_time,FROM_UNIXTIME(create_time, '%Y-%m') as time,table_type")->where($where)->group('time')->order('create_time desc')->select();
         $con = count($result);
 
         for($i=0; $i< $con; $i++) {
@@ -51,7 +50,7 @@ class PrintController extends Controller {
 
         $where['_string'] = " ($where_field > $start_time or $where_field = $start_time) and ($where_field < $end_time or $where_field = $end_time) ";
 
-        $result = M('table_info')->field('id,root_name,create_time,table_type')->where($where)->group('root_name')->select();
+        $result = M('table_info')->field("id,root_name,create_time,table_type, FROM_UNIXTIME(create_time, '%Y-%m') as time")->where($where)->group('time')->order('create_time desc')->select();
 
         $con = count($result);
 
