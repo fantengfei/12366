@@ -18,7 +18,8 @@ class IndexController extends BaseController {
         $table_type = I('post.table_type'); //表格类型
         $table_url  = I('post.table_url');  //表格url
         $save_time  = I('post.save_time');  //保存时间
-
+        //var_dump($save_time);
+       // exit;
     	if(empty($save_time) || empty($table_data) || empty($root_name) || empty($table_name) || empty($table_type) || empty($table_url)){
     		return false;
     	}
@@ -39,7 +40,7 @@ class IndexController extends BaseController {
     	$findresult = M()->table('table_info')->where($where)->find();
     	if(empty($findresult)){
     		//如果不存在则添加
-    		$data['create_time'] = time();
+    		$data['create_time'] = strtotime(date($save_time));
     		$result = M()->table('table_info')->add($data);
 	    	if($result){
 	    		echo 'success';
