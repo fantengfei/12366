@@ -25,6 +25,14 @@
         listeners: {
             click: {
                 fn: function() {
+
+                    var table_data = Ext.get('bodydiv').getHtml();
+                    var root_name  = $('#root_name').val();
+                    var table_name = $('#table_name').val();
+                    var table_type = $('#table_type').val();
+                    var table_url  = $('#table_url').val();
+
+
                     var win = Ext.create("Ext.window.Window", {
                         id: "myWin",
                         title: "保存",
@@ -35,23 +43,21 @@
                         items: [
                             {
                                 xtype: 'datefield',
+                                id: 'save_time',
                                 width: 100,
                                 fieldLabel: '保存时间',
                                 name: 'to_date',
                                 format: 'Y-m-d',
                                 editable: false,
                                 allowBlank: false,
-                                value: new Date() 
+                                value: new Date()
                             }
                         ],
                         buttons: [
                             { xtype: "button", text: "确定", handler: function () {
 
-                                var table_data = Ext.get('bodydiv').getHtml();
-                                var root_name  = $('#root_name').val();
-                                var table_name = $('#table_name').val();
-                                var table_type = $('#table_type').val();
-                                var table_url  = $('#table_url').val();
+                                var currentTime = Ext.util.Format.date(new Date(Ext.getCmp('save_time').getValue()), 'Y-m-d');
+
                                 Ext.Ajax.request({
                                     url: '__ROOT__/index.php/Home/Index/save_table',
                                     params: {
@@ -59,7 +65,8 @@
                                         root_name :root_name,
                                         table_name:table_name,
                                         table_type:table_type,
-                                        table_url :table_url
+                                        table_url :table_url,
+                                        save_time: currentTime
                                     },
                                     success: function(response){
                                         var text = response.responseText;
@@ -69,7 +76,7 @@
                                             alert("保存失败！");
                                         }
 
-                                        this.up("window").close();
+                                        win.close();
                                     }
                                 });
 
