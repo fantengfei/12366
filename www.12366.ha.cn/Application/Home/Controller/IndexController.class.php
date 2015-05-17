@@ -17,8 +17,9 @@ class IndexController extends BaseController {
     	$table_name = I('post.table_name'); //表格名字
         $table_type = I('post.table_type'); //表格类型
         $table_url  = I('post.table_url');  //表格url
+        $save_time  = I('post.save_time');  //保存时间
 
-    	if(empty($table_data) || empty($root_name) || empty($table_name) || empty($table_type) || empty($table_url)){
+    	if(empty($save_time) || empty($table_data) || empty($root_name) || empty($table_name) || empty($table_type) || empty($table_url)){
     		return false;
     	}
     	$data['root_name']  = $root_name;
@@ -29,8 +30,7 @@ class IndexController extends BaseController {
       /*$data['shenbao']     = 
     	$data['bianhao']     = 
     	$data['jieguo']      = */
-        date_default_timezone_set('PRC');
-        $start = date('Y-m-01', strtotime(date("Y-m-d")));
+        $start = date('Y-m-01', strtotime(date($save_time)));
         $end_time   = strtotime("$start +1 month -1 day");
         $start_time = strtotime($start);
         $where['table_url'] = $table_url;
