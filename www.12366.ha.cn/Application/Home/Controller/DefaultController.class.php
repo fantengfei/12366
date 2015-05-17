@@ -26,7 +26,14 @@ class DefaultController extends Controller {
         $data['table_data'] = I('post.name');
         $data['table_type'] = 3;
         $data['table_url']  = I('post.name');
-        $data['id'] = 123456789;
-        M('table_info')->add($data, $options=array(), $replace=true);
+
+        $result = M('table_info')->field('table_name')->where('table_type=3')->find();
+
+        if(empty($result)) {
+            M('table_info')->add($data);
+        } else {
+            M('table_info')->where('table_type=3')->save($data);
+        }
+
     }
 }
