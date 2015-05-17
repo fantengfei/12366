@@ -33,31 +33,116 @@
                     var table_url  = $('#table_url').val();
 
 
+//                    var win = Ext.create("Ext.window.Window", {
+//                        id: "myWin",
+//                        title: "保存",
+//                        width: 400,
+//                        height: 200,
+//                        layout: "fit",
+//                        items: [
+//                            {
+//                                xtype: "form",
+//                                defaultType: 'textfield',
+//                                defaults: {
+//                                    anchor: '100%'
+//                                }
+//                            },
+//                            {
+//                                xtype: 'datefield',
+//                                id: 'save_time',
+//                                width: 100,
+//                                fieldLabel: '保存时间',
+//                                name: 'to_date',
+//                                format: 'Y-m-d',
+//                                editable: false,
+//                                allowBlank: false,
+//                                value: new Date()
+//                            }
+//                        ],
+//                        buttons: [
+//                            { xtype: "button", text: "确定", handler: function () {
+//
+//                                var currentTime = Ext.util.Format.date(new Date(Ext.getCmp('save_time').getValue()), 'Y-m-d');
+//
+//                                Ext.Ajax.request({
+//                                    url: '__ROOT__/index.php/Home/Index/save_table',
+//                                    params: {
+//                                        table_data:table_data,
+//                                        root_name :root_name,
+//                                        table_name:table_name,
+//                                        table_type:table_type,
+//                                        table_url :table_url,
+//                                        save_time: currentTime
+//                                    },
+//                                    success: function(response){
+//                                        var text = response.responseText;
+//                                        if(text == 'success'){
+//                                            alert("成功！");
+//                                        }else{
+//                                            alert("失败！");
+//                                        }
+//
+//                                        win.close();
+//                                    }
+//                                });
+//
+//
+//                            } },
+//                            { xtype: "button", text: "取消", handler: function () { this.up("window").close(); } }
+//                        ]
+//                    });
+//
+//                    win.show();
                     var win = Ext.create("Ext.window.Window", {
                         id: "myWin",
                         title: "保存",
-                        width: 400,
-                        height: 200,
-                        bodyPadding: 60,
+                        width: 500,
+                        height: 100,
                         layout: "fit",
                         items: [
                             {
-                                xtype: 'datefield',
-                                id: 'save_time',
-                                width: 100,
-                                fieldLabel: '保存时间',
-                                name: 'to_date',
-                                format: 'Y-m-d',
-                                editable: false,
-                                allowBlank: false,
-                                value: new Date()
+                                xtype: "form",
+                                defaultType: 'textfield',
+                                defaults: {
+                                    anchor: '100%'
+                                },
+                                fieldDefaults: {
+                                    labelWidth: 80,
+                                    labelAlign: "left",
+                                    flex: 1,
+                                    margin: 5
+                                },
+                                items: [
+                                    {
+                                        xtype: "container",
+                                        layout: "hbox",
+                                        items: [
+                                            {
+                                                xtype: 'datefield',
+                                                id: 'save_time',
+                                                width: 100,
+                                                fieldLabel: '保存时间',
+                                                name: 'to_date',
+                                                format: 'Y-m-d',
+                                                editable: false,
+                                                allowBlank: false,
+                                                value: new Date()
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ],
                         buttons: [
                             { xtype: "button", text: "确定", handler: function () {
 
-                                var currentTime = Ext.util.Format.date(new Date(Ext.getCmp('save_time').getValue()), 'Y-m-d');
+                                var isShow = 1;
 
+                                if (!confirm("是否在查询打印里显示？")) {
+                                    isShow = 0;
+                                }
+
+                                var currentTime = Ext.util.Format.date(new Date(Ext.getCmp('save_time').getValue()), 'Y-m-d');
                                 Ext.Ajax.request({
                                     url: '__ROOT__/index.php/Home/Index/save_table',
                                     params: {
@@ -66,7 +151,8 @@
                                         table_name:table_name,
                                         table_type:table_type,
                                         table_url :table_url,
-                                        save_time: currentTime
+                                        save_time: currentTime,
+                                        is_show: isShow
                                     },
                                     success: function(response){
                                         var text = response.responseText;
@@ -79,8 +165,6 @@
                                         win.close();
                                     }
                                 });
-
-
                             } },
                             { xtype: "button", text: "取消", handler: function () { this.up("window").close(); } }
                         ]
