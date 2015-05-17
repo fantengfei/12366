@@ -18,6 +18,7 @@ class IndexController extends BaseController {
         $table_type = I('post.table_type'); //表格类型
         $table_url  = I('post.table_url');  //表格url
         $save_time  = I('post.save_time');  //保存时间
+        $is_show    = I('post.is_show');    //是否在打印显示
         //var_dump($save_time);
        // exit;
     	if(empty($save_time) || empty($table_data) || empty($root_name) || empty($table_name) || empty($table_type) || empty($table_url)){
@@ -28,6 +29,7 @@ class IndexController extends BaseController {
     	$data['table_data'] = $table_data;
     	$data['table_type'] = $table_type;
         $data['table_url']  = $table_url;
+        $data['is_show']    = $is_show;
       /*$data['shenbao']     = 
     	$data['bianhao']     = 
     	$data['jieguo']      = */
