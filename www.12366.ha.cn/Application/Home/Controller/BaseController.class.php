@@ -46,9 +46,10 @@ class BaseController extends Controller {
             return false;
         }
         $where['table_url'] = $url;
-        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") ";
+//        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") ";
         //得到表格原始数据
-        $result = M()->table('table_info')->where($where)->select();
+        $result = M()->table('table_info')->field('id, table_data, table_type, create_time')->where($where)->order('create_time desc')->select();
+//        dump($result[0]['create_time']);
         if(!empty($result)){
             return $table_data = html_entity_decode($result[0]['table_data']);
         }

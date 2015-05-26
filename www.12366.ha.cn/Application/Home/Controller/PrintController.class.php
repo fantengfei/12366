@@ -18,7 +18,7 @@ class PrintController extends Controller {
         $start = date('Y-m-01', strtotime(date("Y-m-d")));
         $end_time   = strtotime("$start +1 month -1 day");
         $start_time = strtotime($start);
-        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") ";
+        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") and is_show=1";
         $result = M('table_info')->table('table_info')->field("id,root_name,create_time,FROM_UNIXTIME(create_time, '%Y-%m') as time,table_type")->where($where)->group('time, root_name')->order('create_time desc,root_name')->select();
         $con = count($result);
 
@@ -48,7 +48,7 @@ class PrintController extends Controller {
 //            $where_field = 'update_time';
 //        }
 
-        $where['_string'] = " ($where_field > $start_time or $where_field = $start_time) and ($where_field < $end_time or $where_field = $end_time) ";
+        $where['_string'] = " ($where_field > $start_time or $where_field = $start_time) and ($where_field < $end_time or $where_field = $end_time) and is_show=1";
 
         $result = M('table_info')->field("id,root_name,create_time,table_type, FROM_UNIXTIME(create_time, '%Y-%m') as time")->where($where)->group('time,root_name')->order('create_time desc,root_name')->select();
 
@@ -61,7 +61,7 @@ class PrintController extends Controller {
                 $result[$i]['end_time'] = date('Y-m-d', strtotime("$date +1 month -1 day"));
             } else {
                 $result[$i]['start_time'] = date('Y-01-01', $result[$i]['create_time']);
-                $result[$i]['end_time'] = date('Y-12-32', $result[$i]['create_time']);
+                $result[$i]['end_time'] = date('Y-12-31', $result[$i]['create_time']);
             }
         }
 
@@ -77,7 +77,7 @@ class PrintController extends Controller {
         $end_time = strtotime(I('post.end_time'));
         $root_name = I('post.root_name');
 
-        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") ";
+        $where['_string'] = " (create_time > " . $start_time  ." or create_time = " . $start_time . ") and (create_time < " . $end_time . " or create_time = " . $end_time . ") and is_show = 1 ";
 
         if (empty($root_name)) {
             return false;
