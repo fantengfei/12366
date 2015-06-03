@@ -18,7 +18,6 @@ class TableNode3Controller extends BaseController {
         $this->show();
     }
 
-    // 增值纳税申报表（一般个人使用）
     public function table1() {
         $this->display($this->judge_return());
     }
