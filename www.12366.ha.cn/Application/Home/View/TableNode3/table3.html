@@ -1,0 +1,200 @@
+<extend name="TableNode1/base" xmlns="http://www.w3.org/1999/html"/>
+<block name="blocktable">
+    <input type='hidden' id="table_url" value="{$table_url}">
+    <input type='hidden' id="root_name" value="关联业务往来报表">
+    <input type='hidden' id="table_name" value="中华人民共和国企业年度关联业务往来报表">
+    <input type='hidden' id="table_type" value="3">
+    <table id="bodytable" width="900px">
+        <tr class='titletr title-notic'>
+            <td colspan = '10' id='titletd'>关联交易汇总表（二）</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="2" style="text-align: right">1.本年度是否按要求准备同期资料：</td>
+            <td><input type="radio" name="or1" checked>是<br><input type="radio" name="or1">否</td>
+            <td colspan="2" style="text-align: right">2.本年度免除准备同期资料</td>
+            <td><input type="checkbox"></td>
+            <td colspan="3" style="text-align: right">3.本年度是否签订成本分摊协议：</td>
+            <td><input type="radio" name="or2" checked>是<br><input type="radio" name="or2">否</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="10" style="text-align: right">金额单位：人民币（列至角分）</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center' width="130px" rowspan="3">交易类型</td>
+            <td class='gauge-style text-center' width="140px" rowspan="2">交易总金额</td>
+            <td class='gauge-style text-center' colspan="2">关联交易</td>
+            <td class='gauge-style text-center' colspan="3">境外关联交易</td>
+            <td class='gauge-style text-center' colspan="3">境内关联交易</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center' width="70">金额</td>
+            <td class='gauge-style text-center' width="70">比例</td>
+            <td class='gauge-style text-center' width="80">金额</td>
+            <td class='gauge-style text-center' width="60">比例</td>
+            <td class='gauge-style text-center' width="60">比例</td>
+            <td class='gauge-style text-center' width="80">金额</td>
+            <td class='gauge-style text-center' width="60">比例</td>
+            <td class='gauge-style text-center' width="60">比例</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>1</td>
+            <td class='gauge-style text-center' >2=4+7</td>
+            <td class='gauge-style text-center' >3=2/1</td>
+            <td class='gauge-style text-center' >4</td>
+            <td class='gauge-style text-center' >5=4/1</td>
+            <td class='gauge-style text-center' >6=4/2</td>
+            <td class='gauge-style text-center' >7</td>
+            <td class='gauge-style text-center' >8=7/1</td>
+            <td class='gauge-style text-center' >9=7/2</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>材料（商品）购入</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>商品（材料）销售</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>劳务收入</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>劳务支出</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>受让无形资产</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>出让无形资产</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>受让固定资产</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>出让固定资产</td>
+            <td class=' text-right green'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-center'>融资应计利息收入</td>
+            <td class=' text-center'>----</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right ' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-right'>融资应计利息支出</td>
+            <td class=' text-center'>----</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-right' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-right'>其他</td>
+            <td class=' text-right'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right ' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right ' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr>
+            <td class='gauge-style text-right'>合计</td>
+            <td class=' text-right gray'>0.00</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class='text-center'>--</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-center ' >--</td>
+            <td class=' text-right gray' >0.00</td>
+            <td class=' text-right green' >0.00</td>
+            <td class=' text-center' >--</td>
+            <td class=' text-right gray' >0.00</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="4" style="text-align: center;">经办人（盖章）：</td>
+            <td colspan="6" style="text-align: center;">法定代表人（盖章）：</td>
+        </tr>
+    </table>
+</block>
+</extend>

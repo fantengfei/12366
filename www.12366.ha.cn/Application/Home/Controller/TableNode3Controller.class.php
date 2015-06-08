@@ -14,15 +14,7 @@ namespace Home\Controller;
 use Think\Controller;
 class TableNode3Controller extends BaseController {
 
-    public function index() {
-        $this->show();
-    }
-
     public function table1() {
-        $this->display($this->judge_return());
-    }
-
-    public  function  table2() {
         $this->display($this->judge_return());
     }
 
@@ -34,7 +26,7 @@ class TableNode3Controller extends BaseController {
         $this->display($this->judge_return());
     }
 
-    public  function  table5() {
+    public  function  table7() {
         $this->display($this->judge_return());
     }
 }
