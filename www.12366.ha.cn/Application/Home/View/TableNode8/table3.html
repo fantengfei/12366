@@ -1,0 +1,41 @@
+<extend name="TableNode8/base2"/>
+<block name="blocktable">
+<hr style=" border:1px dashed   #b9d0d6"></hr>
+<div style="height:300px;border:1px solid #d9d9d9">
+<table width='100%' cellpadding="0" cellspacing="0" id="bodytable"  style="border-top:2px solid #900;"  >
+ <tr style=" background:#f0f0f0; font-weight:600; font-size:12px;   height="28" >
+  
+   <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">所属期起</td>
+   <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">所属期止</td>
+    <td colspan="8" align="center" height="28" width="202" style="border:1px solid #d0d0d0;border-left:none " >税种</td>
+   <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">申报日期</td>
+   <td colspan="10" align="center" width="252" style="border:1px solid #d0d0d0;border-left:none ">凭证序号</td>
+   <td width="78" colspan="10" align="center" width="252">申报结果信息</td>
+ </tr>
+ <foreach name="res" item="v">
+<if condition="$v['num']%2 neq 0 ">
+  <tr  style=" border:#d9d9d9 1px;" height="28" id="tabledata">
+   
+   <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.create_time}</td>
+   <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.update_time}</td>
+   <td colspan="8" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.table_name}</td>
+   <td colspan="7" align="center" style=" color:#007d00;border:1px solid #d0d0d0;border-left:none">未过期</td>
+   <td colspan="10" align="left"  style="border:1px solid #d0d0d0;border-left:none ">申报项目</td>
+   <td colspan="10" align="left" width="78"  style="border:1px solid #d0d0d0;border-left:none ">申报项目</td>
+ </tr>
+ <else/>
+ <tr  style=" background:#f0f0f0;" height="28">
+  
+   
+   <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.create_time}</td>
+   <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.update_time}</td>
+   <td colspan="7" align="center" style=" color:#007d00;border:1px solid #d0d0d0;border-left:none">未过期</td>
+   <td colspan="10" align="left"  style="border:1px solid #d0d0d0;border-left:none ">申报项目</td>
+   <td colspan="10" align="left" width="78"  style="border:1px solid #d0d0d0;border-left:none ">申报项目</td>
+ </tr>
+ </if>
+ </foreach> 
+</table></div>
+ 
+</block>
+</extend>

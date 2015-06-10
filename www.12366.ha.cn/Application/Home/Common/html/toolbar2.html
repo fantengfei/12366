@@ -1,0 +1,102 @@
+<include file="Public/Home/headFile.html" />
+<script type="text/javascript">
+
+    /**
+     * 选项池，
+     *
+     * 标准字段有：'保存，删除，打印预览，提取数据，修改本年累计'
+     *
+     * 应用范例：
+     *
+     * <\include file="./Application/Home/Common/html/toolbar.html" />
+     * <\script type="text/javascript">
+     *       Ext.onReady(function(){
+     *           var option = ['保存','-' ,'删除'];
+     *          createOptions(option);
+     *       });
+     * <\/script>
+     *
+     * */
+
+    var option = [{
+        xtype: 'button', // default for Toolbars
+        text: '实时扣款',
+        icon: '__COMMON__/icon/shishi.png',
+        listeners: {
+            click: {
+                fn: function() {
+                    
+					var id={};
+					var i=0;
+					$(" input[type=checkbox]").each(function(){
+                        if(this.checked){
+                        id[i]=$(this).val();
+						i++;
+                       }
+                     }); 
+					   var trs = "";
+					    $.each(id,function(n,value) { 
+					  
+					 
+						 trs += value+',';      
+					   });
+                  
+                    Ext.Ajax.request({
+                        url: '__ROOT__/index.php/Home/TableNode8/koukuan',
+                        params: {
+                            
+                            id:trs
+                        },
+                        success: function(response){
+                            var text = response.responseText;
+							window.location.href='__ROOT__/index.php/Home/TableNode8/table2' ;
+                            if(text == 'success'){
+                                alert("申报数据成功！");
+                            }else{
+                                alert("申报数据失败！");
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    }];
+
+    function createOptions(item) {
+
+        var items = [];
+
+        if (item == null) {
+            items = option;
+        } else {
+            for (var j=0; j< item.length; j++) {
+                if (item[j] == '-') {
+                    items.push('-');
+                    continue;
+                }
+                for (var i=0; i< option.length; i++) {
+                    if (item[j] == option[i].text) {
+                        items.push(option[i]);
+                        break;
+                    }
+                }
+            }
+        }
+
+        Ext.create('Ext.toolbar.Toolbar', {
+            renderTo: 'tool-bar',
+            border: false,
+            items: items
+        });
+    }
+
+    Ext.onReady(function(){
+
+        // 设置 'bodydiv' 元素的 style
+        Ext.get('bodydiv').setHeight(document.documentElement.clientHeight - 28);
+        Ext.fly('bodydiv').setStyle({
+            border: 'solid 1px #b6cfd4',
+            overflow:'auto'
+        });
+    });
+</script>

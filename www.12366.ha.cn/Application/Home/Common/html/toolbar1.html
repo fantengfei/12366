@@ -1,0 +1,110 @@
+<include file="Public/Home/headFile.html" />
+<script type="text/javascript">
+
+    /**
+     * 选项池，
+     *
+     * 标准字段有：‘保存，删除，打印预览，提取数据，修改本年累计’
+     *
+     * 应用范例：
+     *
+     * <\include file="./Application/Home/Common/html/toolbar.html" />
+     * <\script type="text/javascript">
+     *       Ext.onReady(function(){
+     *           var option = ['保存','-' ,'删除'];
+     *          createOptions(option);
+     *       });
+     * <\/script>
+     *
+     * */
+
+    var option = [{
+        xtype: 'button', // default for Toolbars
+        text: '申报数据',
+        icon: '__COMMON__/icon/savedata.png',
+        listeners: {
+            click: {
+                fn: function() {
+                    var shenbao = '已申报';
+					var id={};
+					var i=0;
+					$(" input[type=checkbox]").each(function(){
+                        if(this.checked){
+                        id[i]=$(this).val();
+						i++;
+                       }
+                     }); 
+					   var trs = "";
+					    $.each(id,function(n,value) { 
+					   alert(n+' '+value);
+					 
+						 trs += value+',';      
+					   });
+                  
+                    Ext.Ajax.request({
+                        url: '__ROOT__/index.php/Home/Index/edit_data',
+                        params: {
+                            shenbao:shenbao,
+                            id:trs
+                        },
+                        success: function(response){
+                            var text = response.responseText;
+							alert(text);
+                            if(text == 'success'){
+                                alert("申报数据成功！");
+                            }else{
+                                alert("申报数据失败！");
+                            }
+                        }
+                    });
+                }
+            }
+        }
+    },'-', {
+        xtype: 'button',
+        text : '修改数据',
+        icon: '__COMMON__/icon/editdata.png'
+    },'-', {
+        xtype:'button',
+        text: '不同税表间审核',
+        icon: '__COMMON__/icon/checkdata.png'
+    }];
+
+    function createOptions(item) {
+
+        var items = [];
+
+        if (item == null) {
+            items = option;
+        } else {
+            for (var j=0; j< item.length; j++) {
+                if (item[j] == '-') {
+                    items.push('-');
+                    continue;
+                }
+                for (var i=0; i< option.length; i++) {
+                    if (item[j] == option[i].text) {
+                        items.push(option[i]);
+                        break;
+                    }
+                }
+            }
+        }
+
+        Ext.create('Ext.toolbar.Toolbar', {
+            renderTo: 'tool-bar',
+            border: false,
+            items: items
+        });
+    }
+
+    Ext.onReady(function(){
+
+        // 设置 ‘bodydiv’ 元素的 style
+        Ext.get('bodydiv').setHeight(document.documentElement.clientHeight - 28);
+        Ext.fly('bodydiv').setStyle({
+            border: 'solid 1px #b6cfd4',
+            overflow:'auto'
+        });
+    });
+</script>
