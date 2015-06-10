@@ -1,10 +1,256 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<extend name="TableNode1/base" xmlns="http://www.w3.org/1999/html"/>
+<block name="blocktable">
+    <input type='hidden' id="table_url" value="{$table_url}">
+    <input type='hidden' id="root_name" value="关联业务往来报表">
+    <input type='hidden' id="table_name" value="固定资产表（表六）">
+    <input type='hidden' id="table_type" value="1">
+    <table id="bodytable" width="1000px">
+        <tr class='titletr title-notic'>
+            <td colspan = '12' id='titletd'>固定资产表（表六）</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="10" style="text-align: right">金额单位：人民币（列至角分）</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" colspan="2" rowspan="4">项目</td>
+            <td class="text-center gauge-style" colspan="5">受让</td>
+            <td class="text-center gauge-style" colspan="5">出让</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" rowspan="2" width="80px">总交易金额</td>
+            <td class="text-center gauge-style" colspan="2">从境外受让固定资产</td>
+            <td class="text-center gauge-style" colspan="2">从境内受让固定资产</td>
+            <td class="text-center gauge-style" rowspan="2" width="80px">总交易金额</td>
+            <td class="text-center gauge-style" colspan="2">向境外出让固定资产</td>
+            <td class="text-center gauge-style" colspan="2">向境内出让固定资产</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" width="80px">关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">非关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">非关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">非关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">关联交易金额</td>
+            <td class="text-center gauge-style" width="80px">非关联交易金额</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style">1=2+3+4+5</td>
+            <td class="text-center gauge-style">2</td>
+            <td class="text-center gauge-style">3</td>
+            <td class="text-center gauge-style">4</td>
+            <td class="text-center gauge-style">5</td>
+            <td class="text-center gauge-style">6=7+8+9+10</td>
+            <td class="text-center gauge-style">7</td>
+            <td class="text-center gauge-style">8</td>
+            <td class="text-center gauge-style">9</td>
+            <td class="text-center gauge-style">10</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" rowspan="7" width="40">使用权</td>
+            <td class="text-center gauge-style" width="150px">房屋、建造物</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >飞机、火车、轮船、机器、机械和其它生产设备</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >与生产经营活动有关的器具、工具、家具等</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >飞机、火车、轮船以外的运输工具</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >电子设备</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style">其他</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style">合计</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray" >0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+        </tr>
 
-</body>
-</html>
+
+
+
+        <tr>
+            <td class="text-center gauge-style" rowspan="7" width="40">所有权</td>
+            <td class="text-center gauge-style" width="150px">房屋、建造物</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >飞机、火车、轮船、机器、机械和其它生产设备</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >与生产经营活动有关的器具、工具、家具等</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >飞机、火车、轮船以外的运输工具</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" >电子设备</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style">其他</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style">合计</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray" >0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style" colspan="2">总计</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray" >0.00</td>
+            <td class="text-right gray">0.00</td>
+            <td class="text-right gray">0.00</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="6" style="text-align: center;">经办人（盖章）：</td>
+            <td colspan="6" style="text-align: center;">法定代表人（盖章）：</td>
+        </tr>
+    </table>
+</block>
+</extend>

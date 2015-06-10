@@ -1,10 +1,148 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+<extend name="TableNode1/base" xmlns="http://www.w3.org/1999/html"/>
+<block name="blocktable">
+    <input type='hidden' id="table_url" value="{$table_url}">
+    <input type='hidden' id="root_name" value="关联业务往来报表">
+    <input type='hidden' id="table_name" value="购销表（表三）">
+    <input type='hidden' id="table_type" value="1">
+    <table id="bodytable" width="900px">
+        <tr class='titletr title-notic'>
+            <td colspan = '8' id='titletd'>购销表（表三）</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="8" style="text-align: right">金额单位：人民币（列至角分）</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="gauge-style text-left" style="font-weight: bold">一、总购销</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="gauge-style text-center">材料（商品）购入</td>
+            <td class="gauge-style text-center">金额</td>
+            <td colspan="3" class="gauge-style text-center">商品（材料）销售</td>
+            <td class="gauge-style text-center">金额</td>
+        </tr>
+        <tr>
+            <td colspan="3" class="gauge-style text-left">购入总额1=2+5</td>
+            <td class=" text-right gray" width="200px">0.00</td>
+            <td colspan="3" class="gauge-style text-center">销售总额8=9+12</td>
+            <td class=" text-right gray" width="200px">0.00</td>
+        </tr>
+        <tr>
+            <td rowspan="6" class="text-left gauge-style" width="40px">其中</td>
+            <td colspan="2" class="text-center gauge-style">进口购入2=3+4</td>
+            <td class=" text-right gray">0.00</td>
+            <td rowspan="6" class="text-left gauge-style" width="40px">其中</td>
+            <td colspan="2" class="text-center gauge-style">出口销售9=10+11</td>
+            <td class=" text-right gray">0.00</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="text-center gauge-style" width="40px">其中</td>
+            <td class="gauge-style text-left" width="120px">非关联进口3</td>
+            <td class=" text-right">0.00</td>
+            <td rowspan="2" class="text-center gauge-style" width="40px">其中</td>
+            <td class="gauge-style text-left" width="120px">非关联出口10</td>
+            <td class=" text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-left gauge-style">关联进口4</td>
+            <td class=" text-right">0.00</td>
+            <td class="text-left gauge-style">关联出口11</td>
+            <td class=" text-right">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="2" class="text-left gauge-style">国内购入5=6+7</td>
+            <td class=" text-right gray">0.00</td>
+            <td colspan="2" class="text-left gauge-style">国内销售12=13+14</td>
+            <td class=" text-right gray">0.00</td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="text-center gauge-style" width="40px">其中</td>
+            <td class="gauge-style text-left" width="120px">非关联购入6</td>
+            <td class=" text-right">0.00</td>
+            <td rowspan="2" class="text-center gauge-style" width="40px">其中</td>
+            <td class="gauge-style text-left" width="120px">非关联销售13</td>
+            <td class=" text-right">0.00</td>
+        </tr>
+        <tr>
+            <td class="text-left gauge-style">关联购入7</td>
+            <td class=" text-right">0.00</td>
+            <td class="text-left gauge-style">关联销售14</td>
+            <td class=" text-right">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="gauge-style text-left" style="font-weight: bold">二、按出口贸易方式分类的出口销售收入</td>
+        </tr>
+        <tr>
+            <td class="gauge-style text-center" colspan="2" rowspan="2">来料加工</td>
+            <td class="gauge-style text-center">关联金额</td>
+            <td class="gauge-style text-center">非关联金额</td>
+            <td class="gauge-style text-center" colspan="2" rowspan="2">其他贸易港式</td>
+            <td class="gauge-style text-center">关联金额</td>
+            <td class="gauge-style text-center">非关联金额</td>
+        </tr>
+        <tr>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+            <td class="text-right">0.00</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="gauge-style text-left" style="font-weight: bold">三、占出口销售总额10%以上的境外销售对象及其交易</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style"><input type="button" value="增加"></td>
+            <td class="text-center gauge-style"><input type="button" value="删除"></td>
+            <td class="text-center gauge-style">境外关联方名称</td>
+            <td class="text-center gauge-style">国家（地区）</td>
+            <td class="text-center gauge-style" colspan="2">交易金额</td>
+            <td class="text-center gauge-style">定价方法</td>
+            <td class="text-center gauge-style">备注</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="text-center gauge-style">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style"><input type="button" value="增加"></td>
+            <td class="text-center gauge-style"><input type="button" value="删除"></td>
+            <td class="text-center gauge-style">境外关联方名称</td>
+            <td class="text-center gauge-style">国家（地区）</td>
+            <td class="text-center gauge-style" colspan="2">交易金额</td>
+            <td class="text-center gauge-style">定价方法</td>
+            <td class="text-center gauge-style">备注</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="text-center gauge-style">&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="gauge-style text-left" style="font-weight: bold">四、占进口采购总额10%以上的境外采购对象及其交易</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style"><input type="button" value="增加"></td>
+            <td class="text-center gauge-style"><input type="button" value="删除"></td>
+            <td class="text-center gauge-style">境外关联方名称</td>
+            <td class="text-center gauge-style">国家（地区）</td>
+            <td class="text-center gauge-style" colspan="2">交易金额</td>
+            <td class="text-center gauge-style">定价方法</td>
+            <td class="text-center gauge-style">备注</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="text-center gauge-style">&nbsp;</td>
+        </tr>
+        <tr>
+            <td class="text-center gauge-style"><input type="button" value="增加"></td>
+            <td class="text-center gauge-style"><input type="button" value="删除"></td>
+            <td class="text-center gauge-style">境外关联方名称</td>
+            <td class="text-center gauge-style">国家（地区）</td>
+            <td class="text-center gauge-style" colspan="2">交易金额</td>
+            <td class="text-center gauge-style">定价方法</td>
+            <td class="text-center gauge-style">备注</td>
+        </tr>
+        <tr>
+            <td colspan="8" class="text-center gauge-style">&nbsp;</td>
+        </tr>
+        <tr class="titletr">
+            <td colspan="4" style="text-align: center;">经办人（盖章）：</td>
+            <td colspan="4" style="text-align: center;">法定代表人（盖章）：</td>
+        </tr>
+    </table>
+</block>
+</extend>

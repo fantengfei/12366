@@ -30,3 +30,4 @@ class TableNode3Controller extends BaseController {
         $this->display($this->judge_return());
     }
 }
+
