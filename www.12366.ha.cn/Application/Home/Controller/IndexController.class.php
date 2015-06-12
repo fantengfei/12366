@@ -9,7 +9,28 @@ class IndexController extends BaseController {
     public function login() {
         echo "hello";
     }
-
+    public function edit_data(){
+		$id=I('id');
+		$id1=explode(',',$id);
+		$shenbao=I('shenbao');
+		if(empty($id) || empty($shenbao) ){
+    		return false;
+    	}
+		$update_time=time();
+		unset($id1[count($id1)-1]);
+		foreach($id1 as $v){
+			$data['shenbao']  = $shenbao;
+    	    $data['update_time'] = $update_time;
+             $excres=M('table_info')->where("id=$v")->save($data);
+			 
+			}
+		 if(!$excres){
+			 echo "failed";
+			 }
+		 else{
+			 echo "success";
+			 }
+		}
     //保存表格内容
     public function save_table(){
     	$table_data = I('post.table_data'); //表格数据

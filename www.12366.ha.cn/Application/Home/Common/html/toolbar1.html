@@ -35,9 +35,7 @@
                        }
                      }); 
 					   var trs = "";
-					    $.each(id,function(n,value) { 
-					   alert(n+' '+value);
-					 
+					    $.each(id,function(n,value) {
 						 trs += value+',';      
 					   });
                   
@@ -49,7 +47,7 @@
                         },
                         success: function(response){
                             var text = response.responseText;
-							alert(text);
+							window.location.href='__ROOT__/index.php/Home/TableNode8/table1' ;
                             if(text == 'success'){
                                 alert("申报数据成功！");
                             }else{

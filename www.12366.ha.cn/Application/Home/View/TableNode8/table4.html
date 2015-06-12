@@ -15,7 +15,7 @@
       <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款信息</td
     
    
- </tr>
+ ></tr>
  <foreach name="res" item="v">
 <if condition="$v['num']%2 neq 0 ">
   <tr  style=" border:#d9d9d9 1px;" height="28" id="tabledata">
@@ -30,20 +30,21 @@
      <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">凭证序号</td>
       <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款日期</td>
       <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款信息</td
- </tr>
+ ></tr>
  <else/>
  <tr  style=" background:#f0f0f0;" height="28">
 
-   <td colspan="8" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.table_name}</td>
+   <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.update_time}</td>
    <td colspan="7" align="left" style="border:1px solid #d0d0d0;border-left:none ">{$v.create_time}</td>
    <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">税种</td>
-   <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">项目名称</td>
+    <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">{$v.table_name}</td>
+ 
     <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款金额</td>
      <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">税票号码</td>
      <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">凭证序号</td>
       <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款日期</td>
       <td colspan="7" align="center" width="160" style="border:1px solid #d0d0d0;border-left:none ">扣款信息</td
- </tr>
+ ></tr>
  </if>
  </foreach> 
 </table></div>

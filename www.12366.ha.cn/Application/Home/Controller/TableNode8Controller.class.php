@@ -27,7 +27,7 @@ class TableNode8Controller extends BaseController {
 		$list=array();
 		$i=1;
 		foreach($res as $v){
-			if(date("Y-m",$v['update_time'])==$dy){
+			if(date("Y-m",$v['create_time'])==$dy){
 				$v['create_time'] = date('Y-m-d',$v['create_time']);
 				$v['update_time'] = date('Y-m-d',$v['update_time']);
 				$v['num']=$i++;
