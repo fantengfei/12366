@@ -1,14 +1,352 @@
 <extend name="TableNode1/base"/>
 <block name="blocktable">
 <input type='hidden' id="table_url" value="{$table_url}">
-<input type='hidden' id="root_name" value="增值税农产品核定抵扣（增值税一般纳税人使用）">
-<input type='hidden' id="table_name" value="农产品核定扣除增值税进项税额计算表（汇总表）">
+<input type='hidden' id="root_name" value="居民企业所得税2014（年报A）">
+<input type='hidden' id="table_name" value="企业基础信息表">
 <input type='hidden' id="table_type" value="2">
-<table width="100%" rules="none" border="0" style="background-color:#ede6d7; ">
-    <tr><td style="border:0px;"><div style="margin-left: -1px; height: 355px; background: url('__COMMON__/image/qiyejichuxinxibiao1.jpg') no-repeat;"></div></td></tr>
-    <tr><td style="border: 0px;"><div style="height: 344px; background: url('__COMMON__/image/qiyejichuxinxibiao2.jpg') no-repeat;"></div></td></tr>
-    <tr><td style="border: 0px;"><div style=" height: 360px; background: url('__COMMON__/image/qiyejichuxinxibiao3.jpg') no-repeat;"></div></td></tr>
-    <tr><td style="border: 0px;"><div style="margin-left: -1px; height: 100px; background: url('__COMMON__/image/qiyejichuxinxibiao4.jpg') no-repeat;"></div></td></tr>
+<table id="bodytable" width="850px;">
+    <tr class='titletr title-notic'>
+        <td colspan = '6' id='titletd'>企业基础信息表</td>
+    </tr>
+    <tr class="titletr title-notic">
+        <td colspan="">&nbsp;</td>
+    </tr>
+    <tr>
+        <td class="text-center gauge-style" colspan="6">100基本信息</td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">＊101汇总纳税企业</td>
+        <td class="text-left" colspan="5"> &emsp;&emsp;      是（   总机构   <input type="checkbox" disabled="true">   按比例缴纳总机构<input type="checkbox" disabled="true">    ）     否   <input type="checkbox" checked disabled="true"></td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">102注册资本（万元）</td>
+        <td class="text-center" colspan="2">600.00</td>
+        <td class="text-left gauge-style">＊106境外中资控股居民企业</td>
+        <td class="text-right" colspan="2">
+            是<input type="checkbox">&emsp;&emsp;&emsp;&emsp;否<input type="checkbox" checked>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">103所属行业明细代码</td>
+        <td class="text-center" colspan="2">
+            <select style="width:100%;" disabled="true">
+                <option>电气设备批发</option>
+            </select>
+        </td>
+        <td class="text-left gauge-style">＊107从事国家非限制和禁止行业</td>
+        <td class="text-right" colspan="2">
+            是<input type="checkbox" >&emsp;&emsp;&emsp;&emsp;否<input type="checkbox" checked >
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">
+            ＊104从业人数
+            </td>
+        <td class="text-center" colspan="2">48</td>
+        <td class="text-left gauge-style">＊108存在境外关联交易</td>
+        <td class="text-right" colspan="2">
+            是<input type="checkbox">&emsp;&emsp;&emsp;&emsp;否<input type="checkbox" checked>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">＊105资产总额（万元）</td>
+        <td class="text-center" colspan="2">969.22</td>
+        <td class="text-left gauge-style">＊109上市公司</td>
+        <td class="text-right" colspan="2">
+            是（境内<input type="checkbox">&emsp;境外<input type="checkbox">）&emsp;&emsp;&emsp;&emsp;否<input type="checkbox" checked>
+        </td>
+    </tr>
+    <tr>
+        <td class="text-center gauge-style" colspan="6">200主要会计政策和估计</td>
+    </tr>
+    <tr>
+        <td class="text-left gauge-style">＊201使用的会计准则或会计制度</td>
+        <td class="text-left" colspan="5">
+            <p>企业会计准则&emsp;
+            一般企业<input type="checkbox" disabled="true">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            银行<input type="checkbox" disabled="true">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            证券<input type="checkbox" disabled="true">&emsp;
+            保险<input type="checkbox" disabled="true">&emsp;
+            担保<input type="checkbox" disabled="true">&emsp;）</p>
+            <p>小企业会计准则&emsp;&emsp;
+            <input type="checkbox" disabled="true">&emsp;</p>
+            <p>企业会计制度&emsp;&emsp;
+            <input type="checkbox" checked></p>
+            <p>事业单位会计准则（&emsp;&emsp;&emsp;&emsp;
+            事业单位会计制度<input type="checkbox" disabled="true">&emsp;&emsp;&emsp;&emsp;
+            科学事业单位会计制度<input type="checkbox" disabled="true">&emsp;&emsp;&emsp;&emsp;</p>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;医院会计制度<input type="checkbox" disabled="true">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;高等学校会计制度<input type="checkbox" disabled="true">
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;中小学会计制度<input type="checkbox" disabled="true"></p>
+            <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;彩票机构会计制度<input type="checkbox" disabled="true"></p>
+            <p>民间非营利组织会计制度&emsp;&emsp;
+                <input type="checkbox" disabled="true">&emsp;</p>
+            <p>村集体经济组织会计制度&emsp;&emsp;
+                <input type="checkbox" disabled="true">&emsp;</p>
+            <p>农民专业合作社财务会计制度（试行）&emsp;&emsp;
+                <input type="checkbox" disabled="true">&emsp;</p>
+            <p>其他&emsp;&emsp;
+                <input type="checkbox" disabled="true">&emsp;</p>
+        </td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left">＊202会计档案的存放地
+            </td>
+        <td class=" text-center" colspan="2">财务料</td>
+        <td class="gauge-style text-left">203会计核算软件
+            </td>
+        <td class="text-left" colspan="2">用友U8
+            </td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left">＊204记账本位币
+            </td>
+        <td class=" text-right" style="border-right: 0px;">人民币<input type="checkbox" checked></td>
+        <td class=" text-right" style="border-left: 0px;">其他<input type="checkbox"></td>
+        <td class="gauge-style text-left">＊205会计政策和和估计是否发生变化
+            </td>
+        <td class="text-right" style="border-right: 0px;">是<input type="checkbox"></td>
+        <td class="text-right" style="border-left: 0px;">否<input type="checkbox" checked></td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left">＊206固定资产折旧方法
+            </td>
+        <td class=" text-right" style="border-right: 0px;">
+            年限平均法<input type="checkbox" checked>
+        <td class="text-right" style="border-right: 0px; border-left: 0px;">
+            工作量法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">
+            双倍余额递减法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">
+            年数总和法<input type="checkbox"></td>
+        <td class="text-right" style="border-left: 0px;">
+            其他<input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left" rowspan="2">＊207存货成本计价方法
+            </td>
+        <td class=" text-right" style="border-right: 0px; border-bottom: 0px;">
+            先进先出法<input type="checkbox" >
+        <td class="text-right" style="border-right: 0px; border-left: 0px; border-bottom: 0px;">
+            移动加权平均法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;border-bottom: 0px;">
+            月末一次加权平均法<input type="checkbox" checked></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;border-bottom: 0px;">&emsp;</td>
+        <td class="text-right" style="border-left: 0px;border-bottom: 0px;"></td>
+    </tr>
+    <tr>
+        <td class=" text-right" style="border-right: 0px; border-top:0px;">
+            个别计价法<input type="checkbox" checked>
+        <td class="text-right" style="border-right: 0px; border-left: 0px;border-top:0px;">
+            毛利率法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;border-top:0px;">
+            零售价法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;border-top:0px;">
+            计价成本法<input type="checkbox"></td>
+        <td class="text-right" style="border-left: 0px;border-top:0px;">
+            其他<input type="checkbox"></td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left">＊208坏账损失核算方法
+            </td>
+        <td class=" text-right" style="border-right: 0px;">
+            备抵法<input type="checkbox">
+        <td class="text-right" style="border-right: 0px; border-left: 0px;">
+            直接核销法<input type="checkbox" checked></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">&emsp;</td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">&emsp;</td>
+        <td class="text-right" style="border-left: 0px;">&emsp;</td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left">＊209所得税计算方法</td>
+        <td class=" text-right" style="border-right: 0px;">
+            应付税款法<input type="checkbox" checked>
+        <td class="text-right" style="border-right: 0px; border-left: 0px;">
+        资产负债表债务法<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">
+            其他<input type="checkbox"></td>
+        <td class=" text-right" style="border-right: 0px; border-left: 0px;">&emsp;</td>
+        <td class="text-right" style="border-left: 0px;">&emsp;</td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-center" colspan="6">300企业主要股东及对外投资情况</td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-left" colspan="6">301企业主要股东（前5位）</td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-center">股东名称</td>
+        <td class="gauge-style text-center">证件种类</td>
+        <td class="gauge-style text-center">证件号码</td>
+        <td class="gauge-style text-center">经济性质</td>
+        <td class="gauge-style text-center">投资比例</td>
+        <td class="gauge-style text-center">国籍（注册地址）</td>
+    </tr>
+    <tr>
+        <td class=" text-left">
+            王纪川
+        </td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option>居民身份证</option>
+            </select>
+        </td>
+        <td class=" text-left">410727196206155633</td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option>内资个人</option>
+            </select>
+        </td>
+        <td class=" text-right">100.000000%</td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option>中华人民共和国</option>
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option></option>
+            </select>
+        </td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-left">
+            <select style="width: 100%">
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option></option>
+            </select>
+        </td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-left">
+            <select style="width: 100%">
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%">
+                <option></option>
+            </select>
+        </td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width:100%">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-left">
+            <select style="width: 100%">
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%;">
+                <option></option>
+            </select>
+        </td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%;">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-left">
+            <select style="width: 100%;">
+            </select>
+        </td>
+
+    </tr>
+    <tr>
+        <td class="gauge-style text-left" colspan="6">302对外投资（前5位）</td>
+    </tr>
+    <tr>
+        <td class="gauge-style text-center">被投资者名称</td>
+        <td class="gauge-style text-center">纳税人识别号</td>
+        <td class="gauge-style text-center">经济性质</td>
+        <td class="gauge-style text-center">投资比例</td>
+        <td class="gauge-style text-center">投资总额</td>
+        <td class="gauge-style text-center">注册地址</td>
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%; ">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-right">0.00</td>
+        <td class="text-left"></td>
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width:100%;">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-right">0.00</td>
+        <td class="text-left"></td>
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%;">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-right">0.00</td>
+        <td class="text-left"></td>
+    </tr>
+    <tr>
+        <td class=" text-left"></td>
+        <td class=" text-left"></td>
+        <td class=" text-left">
+            <select style="width: 100%;">
+            </select>
+        </td>
+        <td class=" text-right">0.000000%</td>
+        <td class=" text-right">0.00</td>
+        <td class="text-left"></td>
+    </tr>
+    <tr>
+        <td class=" text-left" width="150px"></td>
+        <td class=" text-left" width="150px"></td>
+        <td class=" text-left" width="150px">
+            <select style="width: 100%;">
+            </select>
+        </td>
+        <td class=" text-right" width="150px">0.000000%</td>
+        <td class=" text-right" width="100px">0.00</td>
+        <td class="text-left" width="150px"></td>
+    </tr>
 </table>
 </block>
 </extend>

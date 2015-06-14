@@ -49,4 +49,11 @@ class TableNode4Controller extends BaseController {
     public function table12() {
         $this->display($this->judge_return());
     }
+
+    public function table11() {
+        $this->display($this->judge_return());
+    }
+    public function table21() {
+        $this->display($this->judge_return());
+    }
 }
