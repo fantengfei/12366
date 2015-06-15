@@ -27,18 +27,19 @@
                 fn: function() {
                     var shenbao = '已申报';
 					var id={};
-					var i=0;
+					 var i=0;
 					$(" input[type=checkbox]").each(function(){
                         if(this.checked){
                         id[i]=$(this).val();
 						i++;
                        }
                      }); 
+					
+					
 					   var trs = "";
 					    $.each(id,function(n,value) {
 						 trs += value+',';      
 					   });
-                  
                     Ext.Ajax.request({
                         url: '__ROOT__/index.php/Home/Index/edit_data',
                         params: {
