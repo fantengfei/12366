@@ -1,5 +1,5 @@
 # 说明
-系统基于 ThinkPHP 和 ExtJS 开发。
+系统基于 `ThinkPHP` 和 `ExtJS` 开发。
 
 # Git 基础
 *可以下载 GitHub 客户端，这里重点提一下命令行开发*
@@ -29,5 +29,5 @@ url: "__APP__/Home/TableNode1/table2"
 };
 	```
 
-3. 依据 `thinkPHP`的 MVC 思想进行页面编写
+3. 依据 `thinkPHP`的 `MVC` 思想进行页面编写
 
